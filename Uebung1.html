@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung1</title>
+</head>
+
+<body>
+
+    <h1>HTTP, URI und HTML</h1>
+
+    <hr>
+
+    <h2>Aufgabe 1:</h2>
+    <fieldset>
+        <legend>
+            <legend>
+                <p><b>Aufgabe 1.1</b></p>
+            </legend>
+        </legend>
+
+        <h2>&quotWord Wide Web&quot</h2>
+        <ol>
+            <li>Mit welchen fachlichen Argumenten wurde das WWW-Proposal von Tim Burners Lee abgelehnt?</li>
+            <ul>
+                <li>Er hat die Vagheit in dem Konzept nicht verstanden und hat die mit der Evaluierbarkeit verwechselt.
+                </li>
+                <li>Das Konzept vom Time Berners Lee wäre ein Rückschritt gewesen, weil broken Links erlaubt waren.</li>
+            </ul>
+            <li>Was sind die fachlichen Argumente, warum das WWW dennoch ein Erfolg wurde?</li>
+            <ul>
+                <li>Keine Lösung</li>
+            </ul>
+            <li>Was wäre der Preis für die garantierte Verhinderung von "broken links"?</li>
+            <ul>
+                <li>Keine Lösung</li>
+            </ul>
+
+        </ol>
+
+
+
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>
+            <legend>
+                <p><b>Aufgabe 1.2</b></p>
+            </legend>
+        </legend>
+        <h2>&quotHTTP&quot</h2>
+        <ol><strong>
+                <li>Sie bekommen im Browser den HTTP Status Code 200. Was bedeutet das?</li>
+            </strong>
+            <ul>
+                <li>Die Anfrage war erfolgreich.</li>
+            </ul>
+            <strong>
+                <li>Sie bekommen im Browser den HTTP Status Code 200. Was bedeutet das?</li>
+            </strong>
+            <ul>
+
+                <li>Weiterleitung von einer URL zu einer anderen.</li>
+            </ul>
+            <li><strong>Sie bekommen im Browser den HTTP Status Code 301. Was hat das zu bedeuten?</strong></li>
+            <ul>
+                <li>400 Bad Request => Server ist nicht in der Lage, die Anfrage zu bearbeiten. Mögliche gründe: Falsche
+                    Webadresse, Probleme mit Cookies oder zu Lange URLs. Man kann in dem Fall die Anfrage überprüfen, ob
+                    sie korrekt ist und ob irgendwelche Infos fehlen.</li>
+            </ul>
+            <li><strong>Sie bekommen im Browser den HTTP Status Code 400. Was hat das zu bedeuten? Was können Sie
+                    dagegen tun?</strong>
+            </li>
+            <ul>
+                <li>403 Forbidden, erforderliche Rechte für den Zugriff auf die Ressourcen fehlen.</li>
+            </ul>
+            <li><strong>Sie bekommen im Browser den HTTP Status Code 403. Was hat das zu bedeuten? Was können Sie
+                    dagegen tun?</strong>
+            </li>
+            <ul>
+                <li>Man kann die Anfrage cacheable machen, indem man den http-Caching-Header verwendet. Man kann die
+                    Berechtigung, die IP-Einschränkung und die Server-Logs überprüfen.</li>
+            </ul>
+            <li><b>In einer Webanwendung benötigen Sie eine OPTIONS-Anfrage, die die Optionen des Servers vor dem
+                    eigentlichen Zugriff erfragen soll. Aus Performancegründen soll die Abfrage aber cacheable sein. Wie
+                    könnten Sie dafür eine Lösung angehen?</b></li>
+            <ul>
+                <li>Keine Lösung</li>
+            </ul>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <p><b>Aufgabe 1.3</b></p>
+        </legend>
+
+        <h2>&quotQuiz zu HTML&quot</h2>
+
+        <p><b>Was ist HTML?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>eine Auszeichnungssprache</lable>
+        </form>
+
+        <p><b>Wofür steht HTML?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>Hypertext Markup Öanguage</lable>
+        </form>
+
+
+        <p><b>Wofür wird HTML eingesetzt?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                für die Strukturierung digitaler Dokumente</lable>
+        </form>
+        <p><b>Wer hat HTML erfunden?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                Tim Berners-Lee</lable>
+        </form>
+
+        <p><b>Zu welchem ursprünglichen Zweck wurde HTML erfunden?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                für den Austausch wissenschaftlicher Publikationen</lable>
+        </form>
+
+
+        <p><b>Wer arbeitet alles an der Weiterentwicklung von HTML?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                die Web Hypertext Application Technology Working Group (WHATWG)</lable>
+            <br>
+            <input type="radio" checked>
+            <lable>
+                das World Wide Web Consortium (W3C)</lable>
+        </form>
+
+        <br>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>
+            <p><b>Aufgabe 1.4</b></p>
+        </legend>
+
+        <h2>&quotQuiz zu HTML-Tags&quot</h2>
+
+        <p><b>Was ist ein HTML-Tag?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                ein Auszeichnungselement</lable>
+        </form>
+
+        <p><b>Wofür nutzt man einen HTML-Tag?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                Zur Einbettung weiterer Inhalte, die über Text hinausgehen</lable>
+        </form>
+        <br>
+        <form>
+            <input type="radio" checked>
+            <lable>
+
+                Zur Strukturierung von Webseiteninhalten</lable>
+        </form>
+
+        <p><b>Woraus besteht ein HTML-Tag und wie setzt man ihn ein?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                Hallo Welt!&ltbr&gtWillkommen.</lable>
+        </form>
+
+        <br>
+        <form>
+            <input type="radio" checked>
+            <lable>
+                &ltp&gtParagraph&lt/p&gt</lable>
+        </form>
+
+        <br>
+        <form>
+            <input type="radio" checked>
+            <lable>
+
+                &lth2&gtÜberschrift&lt/h2&gt</lable>
+        </form>
+        <p><b>Was ist ein HTML-Attribut?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+
+                eine Eigenschaft</lable>
+        </form>
+
+        <p><b>Wofür nutzt man ein HTML-Attribut?</b></hp>
+
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+
+                zur Beschreibung zusätzlicher Eigenschaften von HTML-Tags</lable>
+        </form>
+
+
+        <p><b>Wie schreibt man einen Kommentar in HTML?</b></hp>
+
+        <form>
+            <input type="radio" checked>
+            <lable>
+                &lt!-- Kommentar --&gt</lable>
+
+        </form>
+
+        <br>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>
+            <legend>
+                <p><b>Aufgabe 1.5</b></p>
+            </legend>
+        </legend>
+
+        <h2>&quotLückentext zu HTML&quot</h2>
+
+
+        <img src="assets/images/aufgabe1-5-1.jpg" width="50%">
+
+
+
+    </fieldset>
+
+
+
+
+
+    <fieldset>
+        <legend>
+            <legend>
+                <p><b>Aufgabe 1.6</b></p>
+            </legend>
+        </legend>
+        <h2>&quotHTML-Literatur lesen und Fragen beantworten&quot</h2>
+        <ol><strong>
+                <li>Was ist HTML?</li>
+            </strong>
+            <ul>
+                <li>HTML steht für "Hypertext Markup Language" und ist eine standardisierte Auszeichnungssprache, die
+                    zur Erstellung von Webseiten und Webanwendungen verwendet wird.</li>
+            </ul>
+            <strong>
+                <li>Wie kann man eine geschachtelte geordnete Liste der Tiefe 3 erzeugen?</li>
+            </strong>
+            <ul>
+
+                <li>&ltol&gt&ltol&gt&ltol&gt&ltli&gt&lt/li&gt&lt/ol&gt&lt/ol&gt&lt/ol&gt</li>
+            </ul>
+            <li><strong>Wie ist eine HTML-Tabelle aufgebaut?</strong></li>
+            <ul>
+                <li>&lttable&gt&lttr&gt&lttd&gt&lt/td&gt&lt/tr&gt&lt/table&gt</li>
+            </ul>
+            <li><strong>Welche Konventionen sollte man bei Pfaden und Dateinamen beachten?</strong>
+            </li>
+            <ul>
+                <li>Man sollte Leerzeichen und Sonderzeichen vermeiden, aussagekräftige Namen und Kleinbuchstaben
+                    verwenden und Ordner gut strukturieren.</li>
+            </ul>
+            <li><strong>Wie baut man in HTML ein Menü?</strong>
+            </li>
+            <ul>
+                <li>Z.B. mit einer Liste und hyperlinks
+                    <br>
+                    <ul>
+
+                        <li><a href="##">Home</a></li>
+
+                        <li><a href="##">Page1</a></li>
+
+                        <li><a href="##">Page2</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <li><b>Welche Attribute sollte man bei Bildern wie verwenden?</b></li>
+            <ul>
+                <li>src (Quelle): Gibt den Dateipfad oder die URL zum Bild an.</li>
+                <li>alt (Alternativtext): Beschreibt das Bild für Barrierefreiheit und SEO.</li>
+                <li>title (Titel): Zeigt einen Tooltip-Text beim Überfahren des Bildes mit der Maus.</li>
+                <li>width (Breite) und height (Höhe): Definieren die genaue Bildgröße in Pixeln.</li>
+            </ul>
+        </ol>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>
+            <legend>
+                <p><b>Aufgabe 1.6</b></p>
+            </legend>
+        </legend>
+
+        <h2>&quotHTML-Wireframe&quot</h2>
+
+
+
+        <table width="100%">
+            <tr>
+
+                <td width="50%">
+                    <p><sup>Vorlage:</sup></p>
+                   
+                </td>
+                <td width="50%">
+                    <p><sup>Meine Lösung: Der Rahmen (Browser) wurde aus der Vorlage genommen</sup</p>
+                   
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+
+                <td width="50%" vertical-align="top">
+                  
+                    <img src="assets/images/aufgabe1-7.jpg"  width="50%">
+                </td>
+                <td width="50%">
+                  
+                    <img src="assets/images/aufgabe1-7-1.jpg" width="50%">
+                </td>
+            </tr>
+        </table>
+
+
+<div width="100%">
+    <p><strong>Hier ist der Code zu meiner Lösung:</strong></p>
+
+<textarea cols="100" rows="25" width="100%" style="max-width: 100%;">
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtÜ1.2&lt/title&gt
+        &ltlink rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt
+    
+    &lt/head&gt
+    
+    
+    &ltbody&gt
+    
+        &lth1&gtÜbung 1.2: Inventors of the Web&lt/h1&gt
+    
+        &ltul&gt
+            &ltli&gt&ltstrong&gt&ltu&gt&ltmark&gtTim Berners-Lee:&lt/mark&gt&lt/u&gt&lt/strong&gt WWW, HTPP, HTML, URI&lt/li&gt
+            &ltli&gt&ltstrong&gtHakom Lie and Bert Bos:&lt/strong&gtCSS&lt/li&gt
+            &ltli&gt&ltstrong&gtBrendan Eich:&lt/strong&gtJavaScript&lt/li&gt
+        &lt/ul&gt
+    
+        &lthr&gt
+    
+        &lth2&gtInentros of the WWW&lt/h2&gt
+    
+        &lttable border="10"&gt
+            &lttr&gt
+                &lttd colspan="4"&gt
+                    &ltcenter&gt&ltstrong&gtInventors of the WWW&lt/strong&gt&lt/center&gt
+                &lt/td&gt
+            &lt/tr&gt
+            &lttr&gt
+                &lttd&gt
+                    &ltcenter&gt&ltstrong&gtWWW&lt/strong&gt&lt/center&gt
+                &lt/td&gt
+                &lttd&gt
+                    &ltcenter&gt&ltstrong&gtHTML&lt/strong&gt&lt/center&gt
+                &lt/td&gt
+                &lttd&gt
+                    &ltcenter&gt&ltstrong&gtCSS&lt/strong&gt&lt/center&gt
+                &lt/td&gt
+                &lttd&gt
+                    &ltcenter&gt&ltstrong&gtJavaScript&lt/strong&gt&lt/center&gt
+                &lt/td&gt
+            &lt/tr&gt
+    
+            &lttr&gt
+                &lttd&gt&ltmark&gtTim Berners-Lee&lt/mark&gt&lt/td&gt
+                &lttd&gt&ltmark&gtTim Berners-Lee&lt/mark&gt&lt/td&gt
+                &lttd&gtHakom Lie and Bert Bos&lt/td&gt
+                &lttd&gtBrendan Eich&lt/td&gt
+            &lt/tr&gt
+        &lt/table&gt
+        &ltbr&gt
+        &lthr&gt
+    
+        &lttable width="30%" &gt
+    
+            &lttr&gt
+                &lttd colspan="3"&gt
+                    &ltp &gt
+                        &ltstrong&gt&ltcenter&gtInventors of the WWW&lt/center&gt&lt/strong&gt
+                    &lt/p&gt
+                    &lthr&gt
+                &lt/td&gt
+            &lt/tr&gt
+    
+            &lttr&gt
+                &lttd&gt
+                    &lth4&gt
+                        &ltcenter&gtHTML&lt/center&gt
+                    &lt/h4&gt
+                &lt/td&gt
+                &lttd&gt
+    
+                    &lth4&gt
+                        &ltcenter&gt&ltbig&gt|&lt/big&gt&lt/center&gt
+                    &lt/h4&gt
+                &lt/td&gt
+                &lttd&gt
+    
+                    &lth4&gt
+                        &ltcenter&gtJavaScript&lt/center&gt
+                    &lt/h4&gt
+                &lt/td&gt
+            &lt/tr&gt
+    
+            &lttr&gt
+                &lttd&gt
+                    &ltcenter&gt
+                    &ltimg src="tbl.jpg" width="120px"&gt
+                &lt/center&gt
+                &lt/td&gt
+                &lttd&gt
+                    &lth4&gt
+                        &ltcenter&gt&ltbig&gt|&lt/big&gt&lt/center&gt
+                    &lt/h4&gt
+                &lt/td&gt
+                &lttd&gt
+                    &ltcenter&gt
+                    &ltimg src="eich.jpg" width="120px"&gt
+                &lt/center&gt
+                &lt/td&gt
+            &lt/tr&gt
+    
+    
+            &lttr&gt
+                &lttd&gt
+                    &ltp&gt&ltstrong&gt&ltmark&gtTim Berners-Lee&lt/mark&gt&lt/strong&gt&lt/p&gt
+                &lt/td&gt
+    
+                &lttd&gt
+                    &lth4&gt
+                        &ltcenter&gt&ltbig&gt|&lt/big&gt&lt/center&gt
+                    &lt/h4&gt
+                &lt/td&gt
+    
+                &lttd&gt
+                    &ltp&gt&ltstrong&gtBrendan Eich&lt/strong&gt&lt/p&gt
+                &lt/td&gt
+            &lt/tr&gt
+        
+        &lt/table&gt
+    
+                     &lthr&gt
+    
+    
+    &lt/body&gt
+    
+    &lt/html&gt
+</textarea>
+</div>
+
+    </fieldset>
+
+
+
+</body>
+
+</html>
