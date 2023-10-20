@@ -2,12 +2,27 @@
 <html>
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.Uebungsblatt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
     <style>
         body {
-            background-image: linear-gradient(288deg, #D6A4A4 1.5%, #DAE2F8 80%);
+            background-image: linear-gradient(320deg, #D6A4A4 1.5%, #DAE2F8 80%);
             background-repeat: no-repeat;
-
+            font-size: 17px;
+            font-family: 'Oswald', sans-serif;
         }
+
 
         .main {
             max-width: 800px;
@@ -15,364 +30,676 @@
             background-color: white;
             padding: 10px 20px;
             margin: 10px auto;
+            display: inline-block;
 
 
+
+        }
+
+        ul.menue {
+            list-style-image: url(assets/images/bulletpoint-1.png);
+
+            & li {
+                padding: 5px;
+                font-size: 18px;
+
+            }
+
+            & li a {
+                text-decoration: none;
+                color: black
+            }
+
+            & li a:hover {
+                background-image: linear-gradient(320deg, #D6A4A4 1.5%, #DAE2F8 80%);
+
+                color: #9F0024;
+                font-size: 20px;
+                text-decoration: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
         }
 
 
         input[type="checkbox"]:not(:checked)~article {
             display: none
         }
+
+        .ueberschrift {
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            color: #9F0024;
+        }
+
+        .input1 {
+            width: 100%;
+            max-width: 780px;
+            padding: 10px;
+
+        }
+
+        .rep_link {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #d0d0d0;
+        }
+
+        .rep_link:hover {
+            background-color: #DAE2F8;
+            font-size: 18px;
+        }
+
+        a.link:hover {
+            color: #9F0024;
+
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="main">
 
 
-        <!-- Beginn Aufgabe 2.1 -->
-        <section>
+    <table width="100%">
+        <tr>
 
-            <h1>Aufgabe 2.1</h1>
-            <p>Zuordnung der Homepage: Angeben vom Repository-URL</p>
-        </section>
-
-        <!-- Ende Aufgabe 2.1 -->
-
-        <!-- Beginn Aufgabe 2.2 -->
-
-        <section>
-
-            <h1>Aufgabe 2.2</h1>
-
-            <h2>CSS-Selektoren und CSS-Farben</h2>
-
-
-            <p>Klicken Sie auf den <u>Checkbox</u>, um die Lösung sichtbar zu machen</p>
-
-            <!--Beginn Aufgabe 2.2 Teil 1-->
-            <section>
-                <p>Berechnen Sie die Spezifität folgender CSS-Selektoren:</p>
-                <ol>
-
-                    <li>
-                        <span style="color:#c7254e">div div div:focus .inner</span>
-
-                        <input type="checkbox" id="article" name="article">
-                        <article>1+1+1+11+10 = 24</article>
-
-
-                    </li>
-
-                    <li><span style="color:#c7254e">h1 + div.main</span>
-                        <input type="checkbox" id="article" name="article">
-                        <article>1+1+10 = 12</article>
-                    </li>
-
-                    <li><span style="color:#c7254e">div a:link[href*='h-brs']</span>
-                        <input type="checkbox" id="article" name="article">
-                        <article>1+1+11 = 13</article>
-                    </li>
-
-
-                    <li><span style="color:#c7254e">nav > a:hover::before</span>
-                        <input type="checkbox" id="article" name="article">
-                        <article>1+1+11+2 = 15</article>
-                    </li>
-
-
-                    <li><span style="color:#c7254e">ul#primary-nav li.active</span> <input type="checkbox" id="article"
-                            name="article">
-                        <article>1+100+1+1+10 = 113</article>
-                    </li>
-
-                </ol>
-
-            </section>
-            <!--Ende Aufgabe 2.2 Teil 1-->
-
-
-            <!--Beginn Aufgabe 2.2 Teil 2-->
-
-            <section>
-
-                <p>Rechnen Sie folgende RGB-Werte mit den DevTools des Webbrowsers in HSL-Werte um:
-
-                </p>
-                <ol>
-
-                    <li>
-                        <span style="color:#c7254e">#ffffff</span>
-
-                        <input type="checkbox" id="article" name="article">
-                        <article>0, 0%, 100%, 1</article>
-
-
-                    </li>
-
-                    <li><span style="color:#c7254e">#000</span>
-                        <input type="checkbox" id="article" name="article">
-                        <article>0, 0%, 0%, 1</article>
-                    </li>
-
-
-                    <li><span style="color:#c7254e">#ab0978</span>
-                        <input type="checkbox" id="article" name="article">
-                        <article>319, 90%, 35%</article>
-                    </li>
-
-
-                    <li><span style="color:#c7254e">rgb(127,255,33)</span>
-                        <input type="checkbox" id="article" name="article">
-                        <article>95, 100%, 56%</article>
-                    </li>
-
-
-                    <li><span style="color:#c7254e">rgba(255,127,33,0.8)</span> <input type="checkbox" id="article"
-                            name="article">
-                        <article>25, 100%, 56%, 0.8</article>
-                    </li>
-
-                </ol>
+            <!--Begin Menü-bereich-->
+            <td width="20%" style=" vertical-align: top;">
 
 
 
-            </section>
-            <!--Ende Aufgabe 2.2 Teil 1-->
+                <div class="main" style="background-color: #eee;">
+                    <h1 class="ueberschrift" style="text-align: left;font-size: 28px;">Aufgaben:</h1>
 
-        </section>
+                    <nav>
+                        <ul class="menue">
+                            <li><i class="fa-solid fa-circle-dot"></i><a href="#Aufgabe2.1">Aufgabe 2.1</a></li>
+                            <li><a href="#Aufgabe2.2">Aufgabe 2.2</a></li>
 
-        <!-- Ende Aufgabe 2.2 -->
+                            <li><a href="#Aufgabe2.3">Aufgabe 2.3</a></li>
 
-        <!-- Beginn Aufgabe 2.3 -->
+                            <li><a href="#Aufgabe2.4">Aufgabe 2.4</a></li>
 
-        <section>
-            <h1> Aufgabe2.3</h1>
-            <h2> CSS-Positionierung</h2>
+                        </ul>
+                    </nav>
+
+                </div>
 
 
-            <p>Bauen Sie das dynamische Verhalten in den folgenden beiden Videos exakt nach:
 
-            </p>
 
-            <ul>
-                <li>
-                    <a
-                        href="https://www.youtube.com/watch?v=PE3POxjDspo">https://www.youtube.com/watch?v=PE3POxjDspo</a>
 
-                </li>
-                <li> <a
-                        href="https://www.youtube.com/watch?v=HVmnv3k4__E">https://www.youtube.com/watch?v=HVmnv3k4__E</a>
-                </li>
-            </ul>
+            </td>
+            <!--Ende Menü-bereich-->
 
-            <p>Meine Lösung zum ersten Video</p>
-            <textarea>&lt!DOCTYPE html&gt
+
+            <td width="5%">
+
+            </td>
+
+
+            <!--Begin Main-bereich-->
+            <td width="75%" style="vertical-align: top;">
+
+
+                <div class="main">
+
+                    <header>
+
+                        <p class="ueberschrift">Übung 2: Cascading Style Sheets (CSS)</p>
+
+                    </header>
+
+                    <!-- Beginn Aufgabe 2.1 -->
+                    <section id="Aufgabe2.1">
+
+                        <h1>Aufgabe 2.1</h1>
+                        <p>Zuordnung der Homepage: Angeben vom Repository-URL</p>
+
+                        <p class="rep_link"> <a href="https://github.com/Alabed98/Web-Engineering"
+                                class="link">https://github.com/Alabed98/Web-Engineering</a></p>
+
+
+                    </section>
+
+                    <!-- Ende Aufgabe 2.1 -->
+
+                    <!-- Beginn Aufgabe 2.2 -->
+
+                    <section id="Aufgabe2.2">
+
+                        <h1>Aufgabe 2.2</h1>
+
+                        <h2>CSS-Selektoren und CSS-Farben</h2>
+
+
+                        <p>Klicken Sie auf den <u
+                                style="color:#9F0024; font-size: 17px; font-weight: 600;">Checkbox</u>, um
+                            die Lösung sichtbar zu machen</p>
+
+                        <!--Beginn Aufgabe 2.2 Teil 1-->
+                        <section>
+                            <p>Berechnen Sie die Spezifität folgender CSS-Selektoren:</p>
+                            <ol>
+
+                                <li>
+                                    <span style="color:#9F0024">div div div:focus .inner</span>
+
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>1+1+1+11+10 = 24</article>
+
+
+                                </li>
+
+                                <li><span style="color:#9F0024">h1 + div.main</span>
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>1+1+10 = 12</article>
+                                </li>
+
+                                <li><span style="color:#9F0024">div a:link[href*='h-brs']</span>
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>1+1+11 = 13</article>
+                                </li>
+
+
+                                <li><span style="color:#9F0024">nav > a:hover::before</span>
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>1+1+11+2 = 15</article>
+                                </li>
+
+
+                                <li><span style="color:#9F0024">ul#primary-nav li.active</span> <input type="checkbox"
+                                        id="article" name="article">
+                                    <article>1+100+1+1+10 = 113</article>
+                                </li>
+
+                            </ol>
+
+                        </section>
+                        <!--Ende Aufgabe 2.2 Teil 1-->
+
+
+                        <!--Beginn Aufgabe 2.2 Teil 2-->
+
+                        <section >
+
+                            <p>Rechnen Sie folgende RGB-Werte mit den DevTools des Webbrowsers in HSL-Werte um:
+
+                            </p>
+                            <ol>
+
+                                <li>
+                                    <span style="color:#9F0024">#ffffff</span>
+
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>0, 0%, 100%, 1</article>
+
+
+                                </li>
+
+                                <li><span style="color:#9F0024">#000</span>
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>0, 0%, 0%, 1</article>
+                                </li>
+
+
+                                <li><span style="color:#9F0024">#ab0978</span>
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>319, 90%, 35%</article>
+                                </li>
+
+
+                                <li><span style="color:#9F0024">rgb(127,255,33)</span>
+                                    <input type="checkbox" id="article" name="article">
+                                    <article>95, 100%, 56%</article>
+                                </li>
+
+
+                                <li><span style="color:#9F0024">rgba(255,127,33,0.8)</span> <input type="checkbox"
+                                        id="article" name="article">
+                                    <article>25, 100%, 56%, 0.8</article>
+                                </li>
+
+                            </ol>
+
+
+
+                        </section>
+                        <!--Ende Aufgabe 2.2 Teil 1-->
+
+                    </section>
+
+                    <!-- Ende Aufgabe 2.2 -->
+
+                    <!-- Beginn Aufgabe 2.3 -->
+
+                    <section id="Aufgabe2.3">
+                        <h1> Aufgabe2.3</h1>
+                        <h2> CSS-Positionierung</h2>
+
+
+                        <p>Bauen Sie das dynamische Verhalten in den folgenden beiden Videos exakt nach:
+
+                        </p>
+
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/watch?v=PE3POxjDspo">https://www.youtube.com/watch?v=PE3POxjDspo</a>
+
+                            </li>
+                            <li> <a
+                                    href="https://www.youtube.com/watch?v=HVmnv3k4__E">https://www.youtube.com/watch?v=HVmnv3k4__E</a>
+                            </li>
+                        </ul>
+
+                        <p>Meine Lösung zum ersten Video</p>
+                        <textarea>&lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtDocument&lt/title&gt
+     
+    &ltstyle&gt
+        h1{
+            border: 1px solid black;
+            padding: 20px;
+            position: sticky;
+            top:0;
+            background-color: rgba(255,255,255,0.95);
+    
+        }
+      
+        
+        p{
+            background-color: #e4d9dc;
+        }
+    
+    
+    &lt/style&gt
+    &lt/head&gt
+    
+    &ltbody&gt
+        &ltsection&gt
+    
+                &lth1 &gtErste Überschrift&lt/h1&gt
+    
+        &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt/p&gt
+    
+        &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+        &lt/p&gt
+        &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+        &lt/p&gt
+    
+        &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+        &lt/p&gt
+    
+        &ltp&gtAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
+        &lt/p&gt
+    
+        &ltp&gtConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. 
+        &lt/p&gt
+    
+        &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+        &lt/p&gt
+    
+        &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+        &lt/p&gt
+    
+        &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+        &lt/p&gt
+        &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+        &lt/p&gt
+    
+    &lt/section&gt
+    
+    &ltsection&gt
+        &lth1&gtZweite Überschrift&lt/h1&gt
+    
+    &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt/p&gt
+    
+    &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+    &lt/p&gt
+    &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+    &lt/p&gt
+    
+    &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+    &lt/p&gt
+    
+    &ltp&gtAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
+    &lt/p&gt
+    
+    &ltp&gtConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. 
+    &lt/p&gt
+    
+    &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+    &lt/p&gt
+    
+    &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+    &lt/p&gt
+    
+    &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+    &lt/p&gt
+    &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+    &lt/p&gt
+    
+    &lt/section&gt
+    
+    &ltsection&gt
+        &lth1&gtDritte Überschrift&lt/h1&gt
+    
+    &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt/p&gt
+    
+    &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+    &lt/p&gt
+    &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+    &lt/p&gt
+    
+    &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+    &lt/p&gt
+    
+    &ltp&gtAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
+    &lt/p&gt
+    
+    &ltp&gtConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. 
+    &lt/p&gt
+    
+    &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+    &lt/p&gt
+    
+    &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+    &lt/p&gt
+    
+    &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+    &lt/p&gt
+    &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+    &lt/p&gt
+    
+    &lt/section&gt
+        
+    
+    &lt/body&gt
+    &lt/html&gt</textarea>
+
+                        <p>Meine Lösung zum zweiten Video</p>
+
+                        <textarea>&lt!DOCTYPE html&gt
         &lthtml lang="en"&gt
         &lthead&gt
             &ltmeta charset="UTF-8"&gt
             &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-            &lttitle&gtDocument&lt/title&gt
-         
+            &lttitle&gtVideo2&lt/title&gt
+        
         &ltstyle&gt
-            h1{
-                border: 1px solid black;
-                padding: 20px;
-                position: sticky;
-                top:0;
-                background-color: rgba(255,255,255,0.95);
-        
-            }
-          
-            
-            p{
-                background-color: #e4d9dc;
+            img{
+                width: 100%;
             }
         
+            input[type="checkbox"]:checked~article{
+                display: none;
+            }
         
         &lt/style&gt
+        
         &lt/head&gt
-        
         &ltbody&gt
+        
+            &lth1&gtUebung 2.2&lt/h1&gt
+        
+           
+           
             &ltsection&gt
+         
+                &ltinput type="checkbox" id="hide"&gt
+                &ltlabel for="hide"&gthide and show via checkbox&lt/label&gt
+             
+                &ltarticle&gt
+                    &ltimg src="h-brs.jpg" alt="hbrs" width="100%" &gt
+                
+                &lt/article&gt  
+           
         
-                    &lth1 &gtErste Überschrift&lt/h1&gt
-        
-            &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt/p&gt
-        
-            &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-            &lt/p&gt
-            &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-            &lt/p&gt
-        
-            &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-            &lt/p&gt
-        
-            &ltp&gtAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
-            &lt/p&gt
-        
-            &ltp&gtConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. 
-            &lt/p&gt
-        
-            &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-            &lt/p&gt
-        
-            &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-            &lt/p&gt
-        
-            &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-            &lt/p&gt
-            &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-            &lt/p&gt
-        
+           
         &lt/section&gt
-        
-        &ltsection&gt
-            &lth1&gtZweite Überschrift&lt/h1&gt
-        
-        &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt/p&gt
-        
-        &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-        &lt/p&gt
-        &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-        &lt/p&gt
-        
-        &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        &lt/p&gt
-        
-        &ltp&gtAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
-        &lt/p&gt
-        
-        &ltp&gtConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. 
-        &lt/p&gt
-        
-        &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-        &lt/p&gt
-        
-        &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-        &lt/p&gt
-        
-        &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-        &lt/p&gt
-        &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        &lt/p&gt
-        
-        &lt/section&gt
-        
-        &ltsection&gt
-            &lth1&gtDritte Überschrift&lt/h1&gt
-        
-        &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt/p&gt
-        
-        &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-        &lt/p&gt
-        &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-        &lt/p&gt
-        
-        &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        &lt/p&gt
-        
-        &ltp&gtAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. 
-        &lt/p&gt
-        
-        &ltp&gtConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus. 
-        &lt/p&gt
-        
-        &ltp&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-        &lt/p&gt
-        
-        &ltp&gtDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-        &lt/p&gt
-        
-        &ltp&gtUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-        &lt/p&gt
-        &ltp&gtNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        &lt/p&gt
-        
-        &lt/section&gt
+        &ltarticle&gt
             
-        
         &lt/body&gt
         &lt/html&gt</textarea>
+                    </section>
 
-        <p>Meine Lösung zum zweiten Video</p>
+                    <!--Ende Aufgabe 2.3 -->
+                    <!--Beginn Aufgabe 2.4 -->
+                    <section id="Aufgabe2.4">
+                        <h1>Aufgabe 2.4</h1>
+                        <h2>Wireframe mit HTML und CSS</h2>
 
-        <textarea>&lt!DOCTYPE html&gt
-            &lthtml lang="en"&gt
-            &lthead&gt
-                &ltmeta charset="UTF-8"&gt
-                &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-                &lttitle&gtVideo2&lt/title&gt
-            
-            &ltstyle&gt
-                img{
-                    width: 100%;
-                }
-            
-                input[type="checkbox"]:checked~article{
-                    display: none;
-                }
-            
-            &lt/style&gt
-            
-            &lt/head&gt
-            &ltbody&gt
-            
-                &lth1&gtUebung 2.2&lt/h1&gt
-            
-               
-               
-                &ltsection&gt
-             
-                    &ltinput type="checkbox" id="hide"&gt
-                    &ltlabel for="hide"&gthide and show via checkbox&lt/label&gt
-                 
-                    &ltarticle&gt
-                        &ltimg src="h-brs.jpg" alt="hbrs" width="100%" &gt
+
+                        <p>Mit welchem HTML- und CSS-Code kann man dieses Wireframe exakt nachbilden? Schreiben Sie
+                            Ihren
+                            CSS-Code direkt in die HTML-Datei.
+
+                        </p>
+
+                        <p>Die grünliche Farbe ist <span style="color:#9F0024">#a9d7d1</span> und die Hintergrundfarbe
+                            vom
+                            HTML-Formular ist <span style="color:#9F0024">snow</span>. Die Schriftart ist eine <a
+                                href="https://fonts.google.com/">Google Font:</a> <span
+                                style="color:#9F0024">Roboto</span>.
+
+                        </p>
+
+
+                        <table width="100%" style="margin: 20px auto;text-align: center;">
+                            <tr>
+                                <td width="50%">
+
+                                    <p style="color:#9F0024">Vorlage</p>
+                                    <img src="assets/images/aufgabe2-4.jpg" style="width: 100%;max-width: 300px;"
+                                        alt="Survey Form">
+
+                                </td>
+                                <td width="50%">
+                                    <p style="color:#9F0024">Meine Lösung</p>
+                                    <img src="assets/images/aufgabe2-4-2.jpg" style="width: 100%; max-width: 300px;"
+                                        alt="Survey Form">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+
+                                    <p>Hier finden Sie den Code zur meiner Lösung</p>
+                                    <textarea style="width: 100%;height:400px;">
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtAufgabe 2-4&lt/title&gt
+&ltlink rel="preconnect" href="https://fonts.googleapis.com"&gt
+&ltlink rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt
+&ltlink href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet"&gt
+&ltstyle&gt
+    body{
+        background-color: #a9d7d1;
+        text-align: center;
+    
+font-family: 'Roboto', sans-serif;
+    }
+    main{
+        background-color: white;
+        border-radius: 15px 15px 0 0;
+        padding: 20px;
+        font-weight: 600;
+		margin: 20px;
+    }
+
+    td{
+
+        padding: 8px 0; 
+    }
+
+    select{
+        padding: 7px 0; 
+    }
+ 
+ .checkpoints{
+    margin:7px 0;
+ }
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltheader&gt
+        &lth1&gtSurvey Form&lt/h1&gt
+    &lt/header&gt
+    &ltmain&gt
+        &ltp&gtlet us know how we can improve freeCodeCamp&lt/p&gt
+
+
+
+        &ltsection style="width:95%"&gt
+            &lttable width="100%" &gt
+                &lttr align="right"&gt
+                    &lttd &gt
+                        &ltlabel for="eintrag1" style="padding-right: 10px;"&gt*Name: &lt/label&gt
+
+                    &lt/td&gt
+                    &lttd width="32%" align="left"&gt
+                        &ltinput type="text" id="eintrag1" placeholder="Enter your name"&gt
+                    &lt/td&gt
+                &lt/tr&gt
+
+
+
+                &lttr  align="right"&gt
                     
-                    &lt/article&gt  
-               
-            
-               
-            &lt/section&gt
-            &ltarticle&gt
+                    &lttd style="padding-right: 10px;"&gt
+                        &ltlabel for="eintrag1"&gt*Email: &lt/label&gt
+    
+                    &lt/td&gt
+                    &lttd align="left"&gt
+                        &ltinput type="email" id="eintrag1" placeholder="Enter your Email"&gt
+    
+                    &lt/td&gt
+                &lt/tr&gt
+
                 
-            &lt/body&gt
-            &lt/html&gt</textarea>
-        </section>
-
-            <!--Ende Aufgabe 2.3 -->
-            <!--Beginn Aufgabe 2.4 -->
-<section>
-<h1>Aufgabe 2.4</h1>
-<h2>Wireframe mit HTML und CSS</h2>
-
-
-<p>Mit welchem HTML- und CSS-Code kann man dieses Wireframe exakt nachbilden? Schreiben Sie Ihren CSS-Code direkt in die HTML-Datei.
-
-</p>
-
-<p>Die grünliche Farbe ist <span style="color:#c7254e">#a9d7d1</span> und die Hintergrundfarbe vom HTML-Formular ist <span style="color:#c7254e">snow</span>. Die Schriftart ist eine <a href="https://fonts.google.com/">Google Font:</a>  <span style="color:#c7254e">Roboto</span>.
-
-</p>
+                &lttr align="right"&gt
+                    
+                    &lttd style="padding-right: 10px;"&gt
+                        &ltlabel for="eintrag1"&gt*Age: &lt/label&gt
+    
+                    &lt/td&gt
+                    &lttd align="left"&gt
+                        &ltinput type="number" id="eintrag1" placeholder="Age"&gt
+    
+                    &lt/td&gt
+                &lt/tr&gt
 
 
-<table width="100%">
-    <tr>
-        <td width="50%">
+                &lttr align="right"&gt
+                    
+                    &lttd style="padding-right: 10px;"&gt
+                        &ltlabel for="options_1"&gtWhich option best describes your current role? &lt/label&gt
+    
+                    &lt/td&gt
+                    &lttd align="left"&gt
+                        &ltselect id="options_1"&gt
+                            &ltoption &gtStudent&lt/option&gt
+                        &lt/select&gt    
+                    &lt/td&gt
+                &lt/tr&gt
 
-            <img src="assets/images/aufgabe2-4.jpg" style="width: 100%;max-width: 300px;" alt="Survey Form">
 
-        </td>
-        <td width="50%">
-             <img src="assets/images/aufgabe2-4.jpg" style="width: 100%; max-width: 300px;" alt="Survey Form">
-        </td>
-    </tr>
-</table>
+                
+                &lttr align="right" &gt
+                    
+                    &lttd style="padding-right: 10px;vertical-align: top;"&gt
+                        &ltlabel&gtHow likely is that you would recommend freeCodeCamp to a friend&lt/label&gt
+    
+                    &lt/td&gt
+                    &lttd align="left"&gt
+                        &ltinput type="radio" id="definitly" class="checkpoints"&gt
+                        &ltlabel for="definitly" class="checkpoints"&gtDefinitly&lt/label&gt
+                    &ltbr&gt
+                        &ltinput type="radio" id="Maybe"  class="checkpoints"&gt
+                        &ltlabel for="Maybe"  class="checkpoints"&gtMaybe&lt/label&gt
+                        &ltbr&gt
+                        &ltinput type="radio" id="Not_sure"  class="checkpoints"&gt
+                        &ltlabel for="Not_sure"  class="checkpoints"&gtNot sure&lt/label&gt
+                      
+                    &lt/td&gt
+                &lt/tr&gt
 
-</section>
 
-    </div>
+                &lttr align="right" &gt
+                    
+                    &lttd style="padding-right: 10px;vertical-align: top;"&gt
+                        &ltlabel&gtWhat do you like most in FCC?&lt/label&gt
+    
+                    &lt/td&gt
+                    &lttd align="left"&gt
+                        &ltselect&gt
+                            &ltoption&gtSelect an option&lt/option&gt
+                        &lt/select&gt
+                      
+                    &lt/td&gt
+                &lt/tr&gt
+
+
+
+                
+                &lttr align="right" &gt
+                    
+                    &lttd style="padding-right: 10px;vertical-align: top;"&gt
+                        &ltlabel&gtThings that should be improved in the future (Check all that apply):&lt/label&gt
+    
+                    &lt/td&gt
+                    &lttd align="left"&gt
+                        &ltinput type="checkbox" id="Front-end"  class="checkpoints"&gt
+            &ltlabel for="Front-end"  class="checkpoints"&gtFront-end Projects&lt/label&gt
+        &ltbr&gt
+            &ltinput type="checkbox" id="Back-end"  class="checkpoints"&gt
+            &ltlabel for="Back-end"  class="checkpoints"&gtBack-end Projects&lt/label&gt
+            &ltbr&gt
+            &ltinput type="checkbox" id="Data"  class="checkpoints"&gt
+            &ltlabel for="Data"  class="checkpoints"&gtData Visualization&lt/label&gt
+                      
+                    &lt/td&gt
+                &lt/tr&gt
+            &lt/table&gt
+        &lt/section&gt
+     
+
+     
+
+   
+
+    &lt/main&gt
+    
+&lt/body&gt
+&lt/html&gt
+                                    </textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </section>
+
+                </div>
+
+
+            </td>
+            <!--Ende Main-bereich-->
+        </tr>
+    </table>
+
+
+
 
 
 </body>
