@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 2-4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<style>
+    body{
+        background-color: #a9d7d1;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+    }
+    main{
+        background-color: snow;
+        border-radius: 15px 15px 0 0;
+        padding:20px 40px;
+        font-weight: 600;;
+    }
+
+    td{
+
+        padding: 8px 0; 
+    }
+
+    select{
+        padding: 7px 0; 
+    }
+ 
+ .checkpoints{
+    margin:10px 0;
+ }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Survey Form</h1>
+    </header>
+    <main>
+        <p>let us know how we can improve freeCodeCamp</p>
+
+
+
+        <section style="width:95%">
+            <table width="100%" >
+                <tr align="right">
+                    <td >
+                        <label for="eintrag1" style="padding-right: 10px;">*Name: </label>
+
+                    </td>
+                    <td width="32%" align="left">
+                        <input type="text" id="eintrag1" placeholder="Enter your name">
+                    </td>
+                </tr>
+
+
+
+                <tr  align="right">
+                    
+                    <td style="padding-right: 10px;">
+                        <label for="eintrag1">*Email: </label>
+    
+                    </td>
+                    <td align="left">
+                        <input type="email" id="eintrag1" placeholder="Enter your Email">
+    
+                    </td>
+                </tr>
+
+                
+                <tr align="right">
+                    
+                    <td style="padding-right: 10px;">
+                        <label for="eintrag1">*Age: </label>
+    
+                    </td>
+                    <td align="left">
+                        <input type="number" id="eintrag1" placeholder="Age">
+    
+                    </td>
+                </tr>
+
+
+                <tr align="right">
+                    
+                    <td style="padding-right: 10px;">
+                        <label for="options_1">Which option best describes your current role? </label>
+    
+                    </td>
+                    <td align="left">
+                        <select id="options_1">
+                            <option >Student</option>
+                        </select>    
+                    </td>
+                </tr>
+
+
+                
+                <tr align="right" >
+                    
+                    <td style="padding-right: 10px;vertical-align: top;">
+                        <label>How likely is that you would recommend freeCodeCamp to a friend</label>
+    
+                    </td>
+                    <td align="left">
+                        <input type="radio" id="definitly" class="checkpoints" style="margin-top: 0;">
+                        <label for="definitly" class="checkpoints"  style="margin-top: 0;">Definitly</label>
+                    <br>
+                        <input type="radio" id="Maybe"  class="checkpoints">
+                        <label for="Maybe"  class="checkpoints">Maybe</label>
+                        <br>
+                        <input type="radio" id="Not_sure"  class="checkpoints">
+                        <label for="Not_sure"  class="checkpoints">Not sure</label>
+                      
+                    </td>
+                </tr>
+
+
+                <tr align="right" >
+                    
+                    <td style="padding-right: 10px;vertical-align: top;">
+                        <label>What do you like most in FCC?</label>
+    
+                    </td>
+                    <td align="left">
+                        <select>
+                            <option>Select an option</option>
+                        </select>
+                      
+                    </td>
+                </tr>
+
+
+
+                
+                <tr align="right" >
+                    
+                    <td style="padding-right: 10px;vertical-align: top;">
+                        <label>Things that should be improved in the future <br>(Check all that apply):</label>
+    
+                    </td>
+                    <td align="left">
+                        <input type="checkbox" id="Front-end"  class="checkpoints" style="margin-top: 0;">
+            <label for="Front-end"  class="checkpoints" style="margin-top: 0;">Front-end Projects</label>
+        <br>
+            <input type="checkbox" id="Back-end"  class="checkpoints">
+            <label for="Back-end"  class="checkpoints">Back-end Projects</label>
+            <br>
+            <input type="checkbox" id="Data"  class="checkpoints">
+            <label for="Data"  class="checkpoints">Data Visualization</label>
+                      
+                    </td>
+                </tr>
+            </table>
+        </section>
+     
+
+     
+
+   
+
+    </main>
+    
+</body>
+</html>
