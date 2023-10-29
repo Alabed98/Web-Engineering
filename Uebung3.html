@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Uebungsblatt</title>
+
+    <style>
+        html {
+            height: 100%;
+
+            background: rgb(14, 5, 104);
+            background-image: linear-gradient(to right bottom, #051937, #381c52, #730054, #a6003b, #c00000);             display: flex;
+            justify-content: space-around;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+       
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        nav{
+            width: 100%;
+            background-color: white;
+            color:blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:0 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+      
+            
+        }
+        ul li{
+            display: inline-block;
+            display: grid;
+            grid-template-rows: 1fr;
+            align-content: center;
+            align-items: center;
+        }
+
+        ul li a {
+            text-decoration: none;
+            padding: 10px;
+            font-size: 19px;
+          
+        }
+        ul li:hover{
+            background: #051937;
+        }
+
+        .auf1 {
+            background-color: snow;
+            border: 1px solid #888888;
+            box-shadow: 0px 5px 20px 2px #888888;
+
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            
+           
+        }
+        iframe{
+            height: 20rem;  
+        }
+
+        main{
+            width: 100%;
+            max-width: 800px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <h1>Web Engineering</h1>
+
+            <ul>
+                <li><a href="">Aufgabe 1</a></li>
+                <li><a href="">Aufgabe 2</a></li>
+                <li><a href="">Aufgabe 3</a></li>
+            </ul>
+    
+        </nav>
+   
+    </header>
+
+    <main>
+
+        <div class="auf1">
+            
+            <iframe  src="assets/uebungsaufgaben/auf3-1.html"></iframe>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
