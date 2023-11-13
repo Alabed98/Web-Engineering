@@ -1,21 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigator solution</title>
+
+    <style>
+        html {
+            height: 100%;
+            background-image: url(assets/images/world-1302935_1920.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+        }
+
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            width: 100%;
+            color: #c8d3e5;
+            background-color: rgba(0, 0, 0, 0.75);
+            padding-bottom: 20px;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-content: center;
+
+
+        }
+
+        .titel {
+            font-size: 4rem;
+        }
+
+        .untertitel {
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menue {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: right;
+
+        }
+
+        .menue a {
+            padding: 0 10px;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+        }
+
+        .menue a:hover {
+
+            background-color: #c8d3e5;
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            align-items: center;
+            list-style-type: none;
+            width: 100%;
+            max-width: 400px;
+            padding: 0;
+            font-weight: 600;
+        }
+
+        ul li a {
+            color: #c8d3e5
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+
+        .card {
+            text-align: center;
+            max-width: 300px;
+            height: 400px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            cursor: pointer;
+            margin-top: 20px;
+
+        }
+
+        .card-content {
+            padding: 0 10px;
+        }
+
+
+        .card:hover {
+            box-shadow: 0 0px 10px 0 rgba(255, 255, 255, 0.9);
+            transition: 0.3s;
+            ;
+        }
+
+        .btn {
+            display: inline;
+            padding: 10px 15px;
+            font-size: 19px;
+            border-radius: 5px;
+            background-color: #DEA01E;
+            font-weight: 600;
+            border: 1px solid white;
+            text-decoration: none;
+            color: white;
+            
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #DEA01E;
+            border: 2px solid #DEA01E;
+            transition: 0.5s;
+            ;
+        }
+
+
+        .dropdow-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .dropdow:hover .dropdow-content,
+        a {
+            display: block;
+
+
+        }
+
+        .einleitung {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            padding: 10px;
+            margin: 10px 0;
+            line-height: 2rem;
+
+
+        }
+
+        @media screen and (max-width:360px) {
+            .titel {
+                font-size: 2rem;
+            }
+
+        }
+    </style>
+
 </head>
+
 <body>
 
-    <h1>Einführung in Web-Engineering</h1>
-    
-    <menu>
-        <ul>
-            <li><a href="Uebung1.html">Meine Lösung zu der ersten Uebung </a></li>
-            <li><a href="Uebung2.html">Meine Lösung zu der ersten Uebung </a></li>
+    <nav class="menue">
 
-        </ul>
-    </menu>
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Übung & Lösung</a>
+            <div class="dropdow-content">
+                <a href="Uebung1.html">Übungsblatt 1</a>
+                <a href="Uebung2.html">Übungsblatt 2</a>
+                <a href="Uebung3.html">Übungsblatt 3</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <header>
+        <div>
+            <h1 class="titel">Einführung in Web-Engineering</h1>
+            <p class="untertitel">Abdulrahman Alabed</p>
+        </div>
+
+    </header>
+
+
+    <div class="einleitung">
+
+        <div>
+            <img src="" alt="">
+        </div>
+
+        <div>
+
+            <h2>Herzlich willkommen auf meiner Webseite!<br></h2>
+            <h3 > Hier präsentiere ich meine Lösungen für Aufgaben im
+                Bereich HTML, CSS und JavaScript, die im Rahmen der Veranstaltung "Einführung in Web-Engineering" entstanden
+                sind. Jede Aufgabe wird mit ihrer zugehörigen Aufgabenstellung und der entsprechenden Lösung dargestellt.
+                Tauche ein und erkunde meine Umsetzungen für eine praxisnahe Auseinandersetzung mit den Themen. Viel Freude
+                beim Entdecken!</h3>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <div class="card">
+            <div class="card-content">
+                <h1>Übung 1</h1>
+                <p>In der ersten Übung geht es darum, zu lernen, wie man die Grundlagen von HTML anwendet</p>
+
+
+                <p style="margin-top: 30px;">
+
+
+
+                    <a href="Uebung1.html" class="btn" >Meine Lösung</a>
+                </p>
+              
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h1>Übung 2</h1>
+
+                <p>In der ersten Übung geht es darum, zu lernen, wie man die Grundlagen von HTML anwendet</p>
+                
+                <p style="margin-top: 30px;">
+
+
+
+                    <a href="Uebung2.html" class="btn" >Meine Lösung</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h1>Übung 3</h1>
+
+                <p>In der ersten Übung geht es darum, zu lernen, wie man die Grundlagen von HTML anwendet</p>
+
+                
+                <p style="margin-top: 30px;">
+
+
+
+                    <a href="Uebung3.html" class="btn" >Meine Lösung</a>
+                </p>
+            </div>
+        </div>
+
+    </main>
 
 </body>
+
 </html>
