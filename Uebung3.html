@@ -4,88 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3. Uebungsblatt</title>
+    <title>Document</title>
 
     <style>
-        html {
-            height: 100%;
-
-            background: rgb(14, 5, 104);
-            background-image: linear-gradient(to right bottom, #051937, #381c52, #730054, #a6003b, #c00000);             display: flex;
-            justify-content: space-around;
-        }
-
         body {
             margin: 0;
-            height: 100%;
-       
+            background: radial-gradient(circle, #a8c0ff 0%, #3f2b96 100%);
+            background-attachment: fixed;
+
         }
 
         header {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
+            background-color: white;
+            padding: 10px;
+            position: sticky;
+             top:0;
         }
 
-        nav{
-            width: 100%;
-            background-color: white;
-            color:blue;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding:0 10px;
-        }
 
         ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: grid;
-            grid-template-columns:1fr 1fr 1fr;
-      
-            
+
+          
         }
-        ul li{
-            display: inline-block;
+
+        ul li {
             display: grid;
             grid-template-rows: 1fr;
             align-content: center;
             align-items: center;
+            text-align: center;
+            padding: 10px 0;
+         
         }
 
         ul li a {
             text-decoration: none;
-            padding: 10px;
+            padding: 0 5px;
             font-size: 19px;
-          
+            color: #4d40a4;
+            font-weight: 600;
         }
-        ul li:hover{
-            background: #051937;
+
+        ul li a:hover {
+            background: #4d40a4;
+            color: snow;
+            transition: 1s;
+            border-radius: 10px;
+            padding: 10px;
         }
+
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
 
         .auf1 {
-            background-color: snow;
-            border: 1px solid #888888;
-            box-shadow: 0px 5px 20px 2px #888888;
-
+            max-width: 250px;
             width: 100%;
-            max-width: 800px;
-            margin: 20px 0;
-            border-radius: 5px;
             display: flex;
             flex-direction: column;
-            align-items: stretch;
-            
-           
-        }
-        iframe{
-            height: 20rem;  
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+            color: snow;
+            margin-bottom: 40px;
         }
 
-        main{
+        iframe {
+            max-width: 250px;
             width: 100%;
-            max-width: 800px;
+        }
+
+        @media screen and (min-width:300px) and (max-width:600px) {
+            header {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            ul {
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+            }
+
+            .auf1 {
+                max-width: 550px;
+                width: 100%;
+            }
+
+            iframe {
+                max-width: 450px;
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (min-width:600px) {
+            header {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+            }
+
+            .auf1 {
+                max-width: 750px;
+                width: 100%;
+            }
+
+            iframe {
+                max-width: 600px;
+                width: 100%;
+            }
+
+
+
         }
     </style>
 
@@ -94,32 +140,94 @@
 <body>
 
     <header>
+        <h1 style="margin: 0;color:#4d40a4">Web Engineering</h1>
 
-        <nav>
-            <h1>Web Engineering</h1>
+        <ul>
+            <li><a href="#aufgabe1">Aufgabe 3.1</a></li>
+            <li><a href="#aufgabe2">Aufgabe 3.2</a></li>
+            <li><a href="#aufgabe3">Aufgabe 3.3</a></li>
+        </ul>
 
-            <ul>
-                <li><a href="">Aufgabe 1</a></li>
-                <li><a href="">Aufgabe 2</a></li>
-                <li><a href="">Aufgabe 3</a></li>
-            </ul>
-    
-        </nav>
-   
     </header>
+
 
     <main>
 
-        <div class="auf1">
-            
-            <iframe  src="assets/uebungsaufgaben/auf3-1.html"></iframe>
+        <div style="margin: 20px;">
+
+            <div class="aufgaben">
+                <div class="auf1">
+                    <div style="width: 100%;">
+
+                        <div style="padding: 15px;" id="aufgabe1">
+                            <h2 style="margin: 10px 0;">Aufgabe 3.1</h2>
+                            <h3 style="margin: 10px 0;"> Responsiv mit Flexbox und Desktop-First:</h3>
+
+                            <p>Spielen Sie zunächst das Flexbox Froggy-Spiel, um Flexbox zu lernen.</p>
+
+                            <p>Implementieren Sie dann ausschließlich mit HTML, CSS und Flexbox das folgende Responsive
+                                Webdesign
+                                nach der Desktop-First-Strategie:</p>
+
+                            <p style="text-decoration: underline;">Meine Lösung:</p>
+
+                            <iframe src="assets/uebungsaufgaben/auf3-1.html">Aufgabe 3.1</iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="auf1">
+                    <div style="width: 100%;">
+                        <div style="padding: 15px;" id="aufgabe2">
+
+
+                            <h2 style="margin: 10px 0 ;">Aufgabe 3.2</h2>
+                            <h3 style="margin: 10px 0;"> Responsiv mit Grid und Mobile-First:</h3>
+
+                            <p>Implementieren Sie dann das gleiche Responsive Webdesign wie zuvor in Aufgabe 3.1,
+                                allerdings diesmal mit Grid und der Mobile-First-Strategie. Vermeiden Sie außerdem das
+                                Erscheinen von horizontalen Scrollbars so weit wie möglich.
+
+                            </p>
+
+
+
+                            <p style="text-decoration: underline;">Meine Lösung:</p>
+
+                            <iframe src="assets/uebungsaufgaben/auf3-2.html">Aufgabe 3.1</iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auf1">
+                    <div style="width: 100%;">
+                        <div style="padding: 15px;" id="aufgabe3">
+
+                            <h2 style="margin: 10px 0 ;">Aufgabe 3.3</h2>
+                            <h3 style="margin: 10px 0;"> Wireframe responsive mit Grid</h3>
+
+                            <p>Implementieren Sie folgende Landing-Page responsiv mit Grid:
+
+
+
+                            </p>
+
+
+
+                            <p style="text-decoration: underline;">Meine Lösung:</p>
+
+                            <iframe src="assets/uebungsaufgaben/auf3-3.html">Aufgabe 3.1</iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+
+
+
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 
 </html>
