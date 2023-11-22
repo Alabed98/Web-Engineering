@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RednerListe</title>
+</head>
+
+<body>
+
+    <h1>Rednerliste</h1>
+    <form><label>Neuer Redner:</label>
+        <input type="text" id="redner">
+        <input type="button" value="Hinzufügen" onclick="NewRedner()">
+    </form>
+
+    <ol id="liste">
+
+    </ol>
+
+    <p id="t"></p>
+
+    <script>
+    let interval_ID;
+        
+
+        let li_id = 0;
+        let startTime = 0;
+        let totalTime;
+        function NewRedner() {
+
+            // Button id des vorherigen Eintrag
+             if(li_id != 0){
+                let button_id = "button" + (li_id); 
+                document.getElementById(button_id).innerHTML = "Start!";
+            }
+
+            li_id++;
+          
+            let redner = document.getElementById("redner").value;
+
+            let li_eintrag = document.createElement("li");
+            let span_eintrag = document.createElement("span");
+
+            li_eintrag.id = li_id;
+            span_eintrag.id = "time" + li_id;
+            li_eintrag.innerText = redner + " ";
+
+            li_eintrag.appendChild(span_eintrag);
+
+            document.getElementById("liste").appendChild
+                (li_eintrag);
+
+            addButton(li_id);
+
+           
+          
+            
+
+            if(!interval_ID){
+                interval_ID = setInterval( function(){
+                totalTime_fun(li_id), 1000});
+            }
+            else{
+                clearInterval(interval_ID);
+                interval_ID = setInterval( function(){
+                totalTime_fun(li_id), 1000});
+            }
+          
+            startTime_fun();
+            
+          
+        }
+        function startTime_fun() {
+            startTime = new Date();
+    
+        }
+
+        function totalTime_fun(li_id) {
+          
+            let current = new Date();
+            
+            let totalTime = new Date();
+
+            // let total_in_seconds = Math.floor((current - startTime) / 1000);
+
+            // totalTime.setHours = Math.floor(total_in_seconds / 3600 );
+
+            // totalTime.setMinutes = Math.floor(total_in_seconds / 60);
+
+            // totalTime.setSeconds = total_in_seconds % 60;
+
+            // totalTime = `${hores < 10 ? '0': ''}${hores}` + `:${minutes < 10? '0': ''}` + minutes + `:${seconds < 10? '0': ''}` + seconds + " ";
+
+            totalTime.setHours( current.getHours() - startTime.getHours());
+            totalTime.setMinutes(current.getMinutes() - startTime.getMinutes())  ;
+            totalTime.setSeconds(current.getSeconds() - startTime.getSeconds())  ;
+
+            document.getElementById("time" + li_id).innerText = totalTime.toLocaleTimeString();
+        }
+
+        function addButton(li_id){
+
+            let button = document.createElement("button");
+            button.innerText = "Stop!";
+            button.id = "button" + li_id;
+         
+            document.getElementById(li_id).appendChild(button);
+            button.onclick = function(){
+                button_fun(button.id, li_id);
+            };
+        }
+
+        function button_fun(btn_id, li_id){
+            
+            let btn_content = document.getElementById(btn_id).textContent;
+            let li_content = document.getElementById("time" + li_id).textContent;
+
+            if(btn_content === "Stop!"){
+                clearInterval(interval_ID);
+                document.getElementById(btn_id).innerHTML = "Start!"
+            }
+
+            else{
+                debugger;
+                li_content = li_content.split(":");
+
+                let curre_Time = new Date();
+
+                startTime.setMinutes(curre_Time.getMinutes() + parseInt(li_content[1]));
+
+                startTime.setHours(curre_Time.getHours() + parseInt(li_content[0]));
+
+                startTime.setSeconds(curre_Time.getSeconds() + parseInt(li_content[2]));
+
+                interval_ID = setInterval(function(){
+                    totalTime_fun(li_id), 1000;
+            });
+                    
+             
+                document.getElementById(btn_id).innerHTML = "Stop!"
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

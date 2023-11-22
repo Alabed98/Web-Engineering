@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .tabelle {
+           
+
+            & td {
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            & .head {
+                font-weight: 600;
+                background-color: grey;
+                color: white;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="innerh"><strong>Hier ist ein Beispile    über <mark>InnerHtml, InnerText und     TextContent</mark></strong></p>
+
+
+    <table class="tabelle" >
+        <tr class="head">
+            <td>
+                <p>Operationen</p>
+
+            </td>
+
+            <td>
+                <p>Ausgabe</p>
+            </td>
+            <td>
+                <p>performance</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><strong>InnerHtml</strong></p>
+            </td>
+
+            <td>
+                <pre id="erg1"></pre>
+            </td>
+
+            <td>
+                <pre id="zeit1"></pre>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p><strong>InnerText</strong></p>
+            </td>
+
+            <td>
+                <pre id="erg2"></pre>
+            </td>
+
+            <td>
+                <pre id="zeit2"></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>TextContent</strong></p>
+            </td>
+
+            <td>
+                <pre id="erg3"></pre>
+            </td>
+            <td>
+                <pre id="zeit3"></pre>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <script>
+
+        let befor = performance.now();
+        document.getElementById("erg1").innerText = document.getElementById("innerh").innerHTML;
+        let after = performance.now();
+        document.getElementById("zeit1").innerText=after - befor;
+
+        let befor2 = performance.now();
+        document.getElementById("erg2").innerText = document.getElementById("innerh").innerText;
+        let after2 = performance.now();
+
+        document.getElementById("zeit2").innerText=after2 - befor2;
+        let befor3 = performance.now();
+
+        document.getElementById("erg3").innerText = document.getElementById("innerh").textContent;
+        let after3 = performance.now();
+        document.getElementById("zeit3").innerText=after3 - befor3;
+
+
+    </script>
+</body>
+
+
+</html>
