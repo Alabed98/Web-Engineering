@@ -10,7 +10,7 @@
 <body>
 
     <h1>Rednerliste</h1>
-    <form><label>Neuer Redner:</label>
+    <form><label for="redner">Neuer Redner:</label>
         <input type="text" id="redner">
         <input type="button" value="Hinzufügen" onclick="NewRedner()">
     </form>
@@ -19,15 +19,11 @@
 
     </ol>
 
-    <p id="t"></p>
 
     <script>
-    let interval_ID;
-        
-
+        let interval_ID, sekunden, minuten, stunden;
         let li_id = 0;
-        let startTime = 0;
-        let totalTime;
+       
         function NewRedner() {
 
             // Button id des vorherigen Eintrag
@@ -54,50 +50,39 @@
 
             addButton(li_id);
 
-           
-          
-            
+            stunden = 0; 
+            minuten = 0;
+            sekunden = 0;
 
             if(!interval_ID){
                 interval_ID = setInterval( function(){
-                totalTime_fun(li_id), 1000});
+                totalTime_fun(li_id)}, 1000);
             }
             else{
                 clearInterval(interval_ID);
                 interval_ID = setInterval( function(){
-                totalTime_fun(li_id), 1000});
+                totalTime_fun(li_id)}, 1000);
             }
           
-            startTime_fun();
+            totalTime_fun(li_id);
             
           
         }
-        function startTime_fun() {
-            startTime = new Date();
     
-        }
 
         function totalTime_fun(li_id) {
           
-            let current = new Date();
+            if(sekunden > 59){
+                minuten++;
+                sekunden = 0;
+            }
+            if(minuten > 59){
+                stunden++;
+                minuten = 0;
+            }
+            sekunden++;
             
-            let totalTime = new Date();
-
-            // let total_in_seconds = Math.floor((current - startTime) / 1000);
-
-            // totalTime.setHours = Math.floor(total_in_seconds / 3600 );
-
-            // totalTime.setMinutes = Math.floor(total_in_seconds / 60);
-
-            // totalTime.setSeconds = total_in_seconds % 60;
-
-            // totalTime = `${hores < 10 ? '0': ''}${hores}` + `:${minutes < 10? '0': ''}` + minutes + `:${seconds < 10? '0': ''}` + seconds + " ";
-
-            totalTime.setHours( current.getHours() - startTime.getHours());
-            totalTime.setMinutes(current.getMinutes() - startTime.getMinutes())  ;
-            totalTime.setSeconds(current.getSeconds() - startTime.getSeconds())  ;
-
-            document.getElementById("time" + li_id).innerText = totalTime.toLocaleTimeString();
+            document.getElementById("time" + li_id).innerText = `${stunden < 10 ? '0': ''}${stunden}:${minuten < 10 ? '0': ''}${minuten}:${sekunden < 10 ? '0': ''}${sekunden} `;
         }
 
         function addButton(li_id){
@@ -123,23 +108,25 @@
             }
 
             else{
-                debugger;
+                clearInterval(interval_ID);
+
                 li_content = li_content.split(":");
 
-                let curre_Time = new Date();
+                stunden = parseInt(li_content[0]);
+                minuten = parseInt(li_content[1]);
+                sekunden = parseInt(li_content[2]);
 
-                startTime.setMinutes(curre_Time.getMinutes() + parseInt(li_content[1]));
 
-                startTime.setHours(curre_Time.getHours() + parseInt(li_content[0]));
+                [...document.querySelectorAll("button")].forEach(element => element.innerHTML = "Start!");
 
-                startTime.setSeconds(curre_Time.getSeconds() + parseInt(li_content[2]));
-
-                interval_ID = setInterval(function(){
-                    totalTime_fun(li_id), 1000;
-            });
-                    
-             
                 document.getElementById(btn_id).innerHTML = "Stop!"
+                
+                
+                interval_ID = setInterval( function(){
+                totalTime_fun(li_id)}, 1000);
+                
+                document.querySelectorall("button");
+               
             }
 
         }
