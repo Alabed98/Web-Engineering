@@ -1,0 +1,197 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/world-1302935_1920.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 20px;
+    color:#02112d;
+    font-size: 19px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 0 10px;
+    color: #c8d3e5;
+}
+h2{
+    text-align: center;
+}
+
+.titel {
+    font-size: 4rem;
+}
+
+
+.untertitel {
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(200, 211, 229);
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menue {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.menue a {
+ 
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.menue a:hover {
+
+    background-color: #02112d;
+    color:#c8d3e5;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+
+ul li a {
+    color: #c8d3e5
+}
+
+
+.dropdow-content {
+    display: none;
+    position: absolute;
+    background-color: #02112d;
+    color:#c8d3e5;
+    & a{
+        color:#c8d3e5;
+    }
+
+    &:hover , a{
+        background-color: white;
+        color:black;
+     
+    }
+}
+
+.dropdow:hover .dropdow-content{
+    display: block;
+ 
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content{
+    max-width: 800px;
+    width: 100%;
+}
+
+
+.tasks{
+    resize:both;
+    color:white;
+    min-width: 600px;
+    min-height: 400px;
+    max-width: 750px;
+    width: 100%;
+    border: #02112d 3px solid;
+
+}
+
+.card {
+ 
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(200, 211, 229);
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+    overflow: hidden;
+
+}
+
+.card-content {
+    padding: 0 10px;
+}
+
+
+.card:hover {
+    box-shadow: 0 0px 10px 0 rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+   
+}
+.inhalt{
+    padding: 10px 20px;;
+}
+.loesung{
+    text-align: center;
+}
+
+@media screen and (max-width:650px) {
+    .tasks{
+        min-width: 400px;
+        max-width: 600px;
+    
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .tasks{
+        min-width: 150px;
+        max-width: 400px;
+    }
+    .titel {
+        font-size: 2rem;
+    }
+    
+
+}
+
+@media screen and (max-width:240px) {
+    .tasks{
+        min-width: 100px;
+        max-width: 400px;
+    }
+    .titel {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 14px;
+    }
+
+}

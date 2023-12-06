@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="../style_tasks.css">
 
     <style>
+        pre{
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
         .tabelle {
-           
-
+           width: 100%;
+            
             & td {
-                border: 1px solid black;
-                padding: 10px;
+                border: 1px solid #02112d;
+                padding: 5px;
+             
             }
 
             & .head {
@@ -23,25 +28,35 @@
                 text-align: center;
             }
         }
+
+         @media screen and (max-width:400px) {
+            .tabelle{
+                max-width: 400px;
+            }
+         }
     </style>
 
 </head>
 
 <body>
-    <p id="innerh"><strong>Hier ist ein Beispile    über <mark>InnerHtml, InnerText und     TextContent</mark></strong></p>
+   
 
 
+    <div style="margin: 10px;">
+
+
+        <p id="innerh" style="text-align: center;"><strong>Hier ist ein Beispile    über <mark> InnerHtml, InnerText und     TextContent </mark> </strong> </p>
     <table class="tabelle" >
         <tr class="head">
-            <td>
+            <td width="20%">
                 <p>Operationen</p>
 
             </td>
 
-            <td>
+            <td width="70%">
                 <p>Ausgabe</p>
             </td>
-            <td>
+            <td width="10%">
                 <p>performance</p>
             </td>
         </tr>
@@ -91,6 +106,7 @@
     </table>
 
 
+</div>
     <script>
 
         let befor = performance.now();
