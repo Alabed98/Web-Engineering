@@ -104,17 +104,21 @@
         .card {
             text-align: center;
             max-width: 300px;
-         min-height: 400px;
+            min-height: 400px;
             width: 100%;
             background-color: rgba(200, 211, 229);
             color: black;
             cursor: pointer;
+            margin: 0 20px;
             margin-top: 20px;
+          
 
         }
 
         .card-content {
             padding: 0 10px;
+            display: grid;
+            grid-template-rows: 1fr 2fr 1fr;
         }
 
 
@@ -201,9 +205,11 @@
         <div class="dropdow">
             <a href="">Übung & Lösung</a>
             <div class="dropdow-content">
-                <a href="Uebung1.html">Übungsblatt 1</a>
-                <a href="Uebung2.html">Übungsblatt 2</a>
-                <a href="Uebung3.html">Übungsblatt 3</a>
+                <a href="Uebung1.html" target="_blank">Übungsblatt 1</a>
+                <a href="Uebung2.html" target="_blank">Übungsblatt 2</a>
+                <a href="Uebung3.html" target="_blank">Übungsblatt 3</a>
+                <a href="##">Übungsblatt 4</a>
+                <a href="Uebung5.html" target="_blank">Übungsblatt 5</a>
             </div>
 
         </div>
@@ -243,24 +249,53 @@
 
         <div class="card">
             <div class="card-content">
-                <h1>Übung 1</h1>
-                <p>In der ersten Übung geht es darum, zu lernen, wie man die Grundlagen von HTML anwendet</p>
+                <div >
+                    <h1>Übung 1: HTTP, URI und HTML
+                    </h1>
+                </div>
+             
+                <div>
+
+                    <p style="text-align:left; font-weight: 600; font-size: 19px;">Lernziele:</p>
+                    <ol style="text-align:left">
+                        <li>Fachliche Erfolgsprinzipien des WWW kennen und erläutern können.
+    
+                        </li>
+                        <li>Die wichtigsten HTTP-Fehlercodes kennen und erläutern können.
+    
+                        </li>
+                        <li>HTML beschreiben und anwenden können.
+    
+                        </li>
+                        <li>Wireframe mit HTML nachbauen können.
+    
+                        </li>
+                        
+                    </ol>    
+                </div>
+
+                <div>
+
+                    <p style="margin-top: 30px;">
 
 
-                <p style="margin-top: 30px;">
 
-
-
-                    <a href="Uebung1.html" class="btn" >Meine Lösung</a>
-                </p>
+                        <a href="Uebung1.html" class="btn" >Meine Lösung</a>
+                    </p>
+                </div>
+            
               
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h1>Übung 2: Cascading Style Sheets (CSS)</h1>
+                <div>
 
+                    <h1>Übung 2: Cascading Style Sheets (CSS)</h1>
+
+                </div>
+<div>
                 <p style="text-align:left; font-weight: 600; font-size: 19px;">Lernziele:</p>
                 <ol style="text-align:left">
                     <li>Spezifität von CSS-Selektoren berechnen können.
@@ -273,8 +308,9 @@
                     </li>
                     
                 </ol>
+            </div>
 
-
+            <div>
                 <p style="margin-top: 30px;">
 
 
@@ -282,24 +318,143 @@
                     <a href="Uebung2.html" class="btn" >Meine Lösung</a>
                 </p>
             </div>
+            </div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h1>Übung 3</h1>
+                <div>
+                    <h1>Übung 3: Responsiv  Webdesign (RWD)
+                    </h1>
+                </div>
+               
+<div>
+                <p style="text-align:left; font-weight: 600; font-size: 19px;">Lernziele:</p>
+                <ol style="text-align:left">
+                    <li>Responsive Webdesign mit Flexbox und Desktop-First-Strategie umsetzen können.
 
-                <p>In der ersten Übung geht es darum, zu lernen, wie man die Grundlagen von HTML anwendet</p>
 
-                
+                    </li>
+                    <li>Responsive Webdesign mit Grid und Mobile-First-Strategie umsetzen können.
+
+
+                    </li>
+                    <li>Einen Wireframe responsiv mit Grid umsetzen können.
+
+                    </li>
+            </ol>
+        </div>
+            <div>
                 <p style="margin-top: 30px;">
 
 
 
                     <a href="Uebung3.html" class="btn" >Meine Lösung</a>
-                </p>
+                </p></div>
             </div>
         </div>
 
+
+        <div class="card">
+            <div class="card-content">
+                <div>
+                <h1>Übung 4: JavaScript (JS)
+
+
+                </h1>
+            </div>
+            <div>
+                <p style="text-align:left; font-weight: 600; font-size: 19px;">Lernziele:</p>
+                <ol style="text-align:left">
+                    <li>JavaScript-Funktionen selbst erstellen können.
+
+
+
+                    </li>
+                    <li>Mit Objekten und Funktionen in JavaScript komplexe Probleme lösen können.
+
+
+
+                    </li>
+                  
+            </ol></div>
+            <div>
+                <p style="margin-top: 30px;">
+
+
+
+                    <a href="Uebung4.html" class="btn" >Meine Lösung</a>
+                </p></div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-content">
+                <div>
+                <h1>Übung 5: Document Object Model (DOM)
+                </h1>
+            </div>
+            <div>
+                <p style="text-align:left; font-weight: 600; font-size: 19px;">Lernziele:</p>
+                <ol style="text-align:left">
+                    <li>In JavaScript DOM-Abfragen programmieren können.
+
+                    </li>
+                    <li>In JavaScript DOM-Manipulationen programmieren können.
+
+                    </li>
+                    <li>Unterschiede zwischen innerHTML, innerText, textContent und outerHTML erklären können.
+
+                    </li>
+                  
+                    <li>Performanz-Messungen von DOM-Operationen durchführen können.
+
+                    </li>
+                  
+                  
+            </ol></div>
+            <div>
+                <p style="margin-top: 30px;">
+
+
+
+                    <a href="Uebung5.html" class="btn" >Meine Lösung</a>
+                </p></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div>
+                <h1>Übung 4: JavaScript (JS)
+
+
+                </h1>
+            </div>
+            <div>
+                <p style="text-align:left; font-weight: 600; font-size: 19px;">Lernziele:</p>
+                <ol style="text-align:left">
+                    <li>JavaScript-Funktionen selbst erstellen können.
+
+
+
+                    </li>
+                    <li>Mit Objekten und Funktionen in JavaScript komplexe Probleme lösen können.
+
+
+
+                    </li>
+                  
+            </ol></div>
+            <div>
+                <p style="margin-top: 30px;">
+
+
+
+                    <a href="Uebung4.html" class="btn" >Meine Lösung</a>
+                </p></div>
+            </div>
+        </div>
     </main>
 
 </body>
