@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übungsblat 5</title>
+    <script src="https://kit.fontawesome.com/5cd5269668.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+     
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titel">Document Object Model (DOM)</h1>
+
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+                <a href="#zweite_Aufgabe">Aufgabe 2</a>
+               
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                <h2>
+                    5.1 Performanz-Messungen von DOM-Operationen
+
+                </h2>
+
+                <p>Implementieren Sie Performanz-Messungen zum Vergleich von</p>
+
+                <ul>
+                    <li>innerHTML,
+                    </li>
+                    <li> innerText,
+                    </li>
+                    <li> textContent und
+                    </li>
+                    <li>outerHTML</li>
+                </ul>
+
+                <p >selbstst&auml;ndig in JavaScript durch Nutzung der <a href="https://www.w3schools.com/js/js_htmldom.asp">DOM-API</a>. Geben Sie die Messergebnisse als Tabelle aus. Verwenden Sie die eingebauten Zeitmessung-Funktionen&nbsp;<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" >performance .now()</a>, siehe auch&nbsp;<a target="_blank" href="https://developers.google.com/web/updates/2012/08/When-milliseconds-are-not-enough-performance-now">When-milliseconds-are-not-enough-performance-now</a>. Suchen Sie eine möglichst kurze und elegante Lösung.</p>
+
+                <p >Dabei ist zu beachten, dass Browser, um potenzielle Sicherheitsbedrohungen wie&nbsp;<a target="_blank" href="https://spectreattack.com/" >Meltdown oder Spectre</a> zu minimieren, den zur&uuml;ckgegebenen Wert normalerweise um einen bestimmten Betrag runden. Dies f&uuml;hrt zu einer gewissen Ungenauigkeit. Beispielsweise rundet Firefox die zur&uuml;ckgegebene Zeit in Schritten von 1 Millisekunde. Diese Zwangsrundung kann man jedoch wiederum abschalten mittels der Firefox-Einstellung&nbsp;<code>privacy. reduceTimerPrecision</code>, siehe&nbsp;<a target="_blank" href="https://stackoverflow.com/questions/50117537/how-to-get-microsecond-timings-in-javascript-since-spectre-and-meltdown" >How to get microsecond timings in JavaScript since Spectre and Meltdown</a></p>
+
+                <div class="loesung">
+                    <iframe class="tasks" src="assets/uebungsaufgaben/auf5-1.html"></iframe>
+
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="content" id="zweite_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                <h2>
+                    5.2 Rednerliste mit Zeitmessung 
+
+                </h2>
+
+                <p ><span >Implementieren Sie die interaktive Anwendung &quot;Rednerliste mit Zeitmessung&quot; selbstst&auml;ndig in JavaScript durch Nutzung der&nbsp;</span><a target="_blank" href="https://www.w3schools.com/js/js_htmldom.asp" >DOM-API</a><span >&nbsp;und der&nbsp;</span><a target="_blank" href="https://www.w3schools.com/js/js_timing.asp" >Timer-Funktionen</a><span >. Neue Redner sollen auf Knopfdruck hinzugef&uuml;gt werden können. Deren Uhr wird dann sofort automatisch gestartet und alle anderen Uhren angehalten. Bei jedem Redner soll die individuelle, gemessene Redezeit sekundengenau angezeigt werden. F&uuml;r jeden Redner soll es einen eigenen Start-/Stopp-Button geben. Es soll immer nur eine Uhr laufen. Angezeigt werden sollen die bisherigen Summenzeiten aller Redebeitr&auml;ge der betreffenden Person. Suchen Sie eine möglichst kurze und elegante Lösung. Achten Sie gleichzeitig auf gute Usability: z.B. wenn die Eingabe mit einem Return beendet wird, soll der Klick auf den Button nicht mehr erforderlich sein.</span></p>
+                <div class="loesung">
+                    <iframe class="tasks" src="assets/uebungsaufgaben/auf5-2.html"></iframe>
+
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
