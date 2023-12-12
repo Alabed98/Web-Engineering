@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 4 Aufgabe 3</title>
+</head>
+<body>
+    
+    <h2>Fibonacci </h2>
+    <p>Die ersten 2000 Fibonacci-Zahlen</p>
+
+    <table id="tabelle" >
+      </table>
+    <script>
+
+function fibonacci(){
+    var res = [];
+    var ergebnis = {
+        zahl1:BigInt(0),
+        zahl2:BigInt(1)
+    }
+        function add(zahl1 , zahl2){
+            ergebnis.zahl2 = zahl1 + zahl2;
+            ergebnis.zahl1 = zahl2;
+        }
+    
+        for(var t = 0; t < 2000; t++){
+    
+            add(ergebnis.zahl1, ergebnis.zahl2);
+            res.push(ergebnis.zahl2);
+        }
+    return res;
+}
+
+const endresu = fibonacci();
+    
+endresu.forEach(function(x){
+    const zahlen = document.getElementById("tabelle");
+
+    const elem1 = document.createElement("tr");
+   const elem = document.createElement("td");
+   elem.innerHTML = x ;
+   elem1.appendChild(elem)
+   zahlen.appendChild(elem1);
+})
+
+
+
+    </script>
+</body>
+</html>
