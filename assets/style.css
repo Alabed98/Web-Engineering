@@ -161,6 +161,36 @@ ul li a {
     text-align: center;
 }
 
+
+.CodeTeil{
+    & .CodeContainer{
+        word-wrap: break-word; 
+        white-space: pre-wrap; 
+        overflow-x: auto;
+        font-size: 17px;
+        background-color: orangered;
+        color:white;
+        padding: 0 10px;
+        margin: 0;
+    }   
+
+    & .CodeContainer:hover{
+        box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.9);
+        transition: 0.3s;
+    }
+    & .btn{
+        background-color:#02112d;
+        color:#c8d3e5;
+        font-weight: 600;
+        
+    }
+    & .btn:hover{
+        background-color: green;
+    }
+
+}
+
+
 @media screen and (max-width:650px) {
     .tasks{
         min-width: 400px;
