@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 4, Aufgabe 1</title>
+</head>
+<link rel="stylesheet" href="../style_tasks.css">
+
+<body>
+<div style="padding: 20px;">
+    <h2>Summe von zwei Zahlen</h2>
+    <input type="number" id="SumZahl1" placeholder="zahl1">
+    <input type="number" id="SumZahl2" placeholder="zahl1">
+    <input type="submit" value="Berechnen" onclick="add1()">
+    <p id="Sum"></p>
+    <hr style="border-bottom:dashed 1px black">
+
+    <h2>Produkt von zwei Zahlen</h2>
+    <input type="number" id="ProZahl1" placeholder="zahl1">
+    <input type="number" id="ProZahl2" placeholder="zahl1">
+    <input type="submit" value="Berechnen" onclick="mul1()">
+    <p id="Produkt"></p>
+    <hr style="border-bottom:dashed 1px black">
+
+    <h2>Summe von zwei Zahlen mit zwei Funktionsaufrufen</h2>
+    <input type="number" id="Zahl1" placeholder="zahl1">
+    <input type="number" id="Zahl2" placeholder="zahl1">
+    <input type="submit" value="Berechnen" onclick="addf1()">
+    <p id="Summe2"></p>
+    <hr style="border-bottom:dashed 1px black">
+</div>
+    <script>
+
+
+
+        function identity(par) {
+            return par;
+        }
+        function identity_function(par) {
+            return function () { return par };
+        }
+
+        function add1() {
+            const Sumzahl1 = parseInt(document.getElementById("SumZahl1").value);
+            const Sumzahl2 = parseInt(document.getElementById("SumZahl2").value);
+            add(Sumzahl1, Sumzahl2);
+        }
+
+        function add(zahl1, zahl2) {
+            document.getElementById("Sum").innerHTML = zahl1 + zahl2;
+        }
+
+
+        function mul1() {
+
+            const Prodzahl2 = parseInt(document.getElementById("ProZahl2").value);
+            const Prodzahl1 = parseInt(document.getElementById("ProZahl1").value);
+            mul(Prodzahl1, Prodzahl2);
+        }
+        function mul(par1, par2) {
+           document.getElementById("Produkt").innerHTML = par1 * par2;
+        }
+
+        function addf1(){
+            
+            const Prodzahl2 = parseInt(document.getElementById("Zahl2").value);
+            const Prodzahl1 = parseInt(document.getElementById("Zahl1").value);
+            addf(Prodzahl1)(Prodzahl2);
+        }
+
+        function addf(x) {
+            return function (y) { 
+                
+                document.getElementById("Summe2").innerHTML = x + y;
+
+                 }
+
+        }
+        function applyf(funct, x, y) {
+            return function () {
+                return funct(x, y);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
