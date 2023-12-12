@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 4</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titel">JavaScript (JS)</h1>
+
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+                <a href="#dritte_Aufgabe">Aufgabe 3</a>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        4.1 Funktionen
+
+                    </h2>
+
+                    <p>Schreiben Sie folgende Funktionen in JavaScript:</p>
+
+                    <ol>
+                        <li>Eine Funktion identity(), die ein Argument als Parameter entgegennimmt und dieses als
+Ergebnis zurückgibt.
+                        </li>
+                        <li> Eine Funktion identity_function(), die ein Argument als Parameter entgegennimmt und eine
+Funktion zurückgibt, die dieses Argument zurückgibt.
+                        </li>
+                        <li> Zwei binäre Funktionen add und mul, die Summe und Produkt berechnen.
+                        </li>
+                        <li>Eine Addierer-Funktion addf(), so dass addf(x)(y) genau x + y zurückgibt. (Es haben also
+zwei Funktionsaufrufe zu erfolgen. addf(x) liefert eine Funktion, die auf y angewandt wird.)
+                        </li>
+                        <li>Eine Funktion applyf(), die aus einer binären Funktion wie add(x,y) eine Funktion addf
+berechnet, die mit zwei Aufrufen das gleiche Ergebnis liefert, z.B. addf = applyf(add);
+addf(x)(y) soll add(x,y) liefern. Entsprechend applyf(mul)(5)(6) soll 30 liefern, wenn mul
+die binäre Multiplikation ist.</li>
+
+                    </ol>
+
+
+                    <div class="loesung">
+
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf4-1.html"></iframe>
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()" class="btn">HIER</button>,
+um den Code sichtbar zu machen</p>
+<pre class="CodeContainer" >
+    <div id="Code1" style="display: none;margin: 0;padding: 0;">                
+&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Uebung 4, Aufgabe 1&lt;/title&gt;
+    &lt;link rel="stylesheet" href="../style_tasks.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="padding: 20px;"&gt;
+    &lt;h2&gt;Summe von zwei Zahlen&lt;/h2&gt;
+    &lt;input type="number" id="SumZahl1" placeholder="zahl1"&gt;
+    &lt;input type="number" id="SumZahl2" placeholder="zahl1"&gt;
+    &lt;input type="submit" value="Berechnen" onclick="add1()"&gt;
+    &lt;p id="Sum"&gt;&lt;/p&gt;
+    &lt;hr style="border-bottom:dashed 1px black"&gt;
+
+    &lt;h2&gt;Produkt von zwei Zahlen&lt;/h2&gt;
+    &lt;input type="number" id="ProZahl1" placeholder="zahl1"&gt;
+    &lt;input type="number" id="ProZahl2" placeholder="zahl1"&gt;
+    &lt;input type="submit" value="Berechnen" onclick="mul1()"&gt;
+    &lt;p id="Produkt"&gt;&lt;/p&gt;
+    &lt;hr style="border-bottom:dashed 1px black"&gt;
+
+    &lt;h2&gt;Summe von zwei Zahlen mit zwei Funktionsaufrufen&lt;/h2&gt;
+    &lt;input type="number" id="Zahl1" placeholder="zahl1"&gt;
+    &lt;input type="number" id="Zahl2" placeholder="zahl1"&gt;
+    &lt;input type="submit" value="Berechnen" onclick="addf1()"&gt;
+    &lt;p id="Summe2"&gt;&lt;/p&gt;
+    &lt;hr style="border-bottom:dashed 1px black"&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+
+        function identity(par) {
+            return par;
+        }
+        function identity_function(par) {
+            return function () { return par };
+        }
+
+        function add1() {
+            const Sumzahl1 = parseInt(document.getElementById("SumZahl1").value);
+            const Sumzahl2 = parseInt(document.getElementById("SumZahl2").value);
+            add(Sumzahl1, Sumzahl2);
+        }
+
+        function add(zahl1, zahl2) {
+            document.getElementById("Sum").innerHTML = zahl1 + zahl2;
+        }
+
+
+        function mul1() {
+
+            const Prodzahl2 = parseInt(document.getElementById("ProZahl2").value);
+            const Prodzahl1 = parseInt(document.getElementById("ProZahl1").value);
+            mul(Prodzahl1, Prodzahl2);
+        }
+        function mul(par1, par2) {
+           document.getElementById("Produkt").innerHTML = par1 * par2;
+        }
+
+        function addf1(){
+            
+            const Prodzahl2 = parseInt(document.getElementById("Zahl2").value);
+            const Prodzahl1 = parseInt(document.getElementById("Zahl1").value);
+            addf(Prodzahl1)(Prodzahl2);
+        }
+
+        function addf(x) {
+            return function (y) { 
+                
+                document.getElementById("Summe2").innerHTML = x + y;
+
+                 }
+
+        }
+        function applyf(funct, x, y) {
+            return function () {
+                return funct(x, y);
+            }
+        }
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
+            </pre>
+                    </div>
+
+                    <script>
+                        function CodeZeigen1() {
+                            const codeElem = document.getElementById("Code1");
+                            const display2 = codeElem.style.display;
+                
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
+                
+                            } else {
+                                codeElem.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="content" id="dritte_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        4.3 Fibonacci
+
+                    </h2>
+
+                    <p>Schreiben Sie im Browser die Fibonacci-Funktion in JS und geben Sie die ersten 2000
+                        Fibonacci-Zahlen 0,1,1,2,3,5,8,13,... auf der Konsole mit console.log() aus.
+
+                    </p>
+
+                    <p>Achten Sie auf Performanz: Berechnen Sie jeden Fibonacci-Wert nur einmal. Speichern Sie zu diesem
+                        Zweck jede berechnete Fibonacci-Zahl in einer Tabelle.</p>
+                    <ol>
+                        <li>Was ist die größte Fibonacci-Zahl, die sich noch als Integer sicher speichern lässt
+(Number.MAX_SAFE_INTEGER)? Die wievielte Zahl in der Fibonacci-Folge ist das?
+                        </li>
+                        <li> Was ist die größte Fibonacci-Zahl, die sich noch als Number speichern lässt
+(Number.MAX_VALUE)? Die wievielte Zahl in der Fibonacci-Folge ist das?
+                        </li>
+                        <li>Wechseln Sie zu BigInt, um alle 2000 Fibonacci-Zahlen korrekt anzuzeigen.
+                        </li>
+                        <li>Optional: Was ist die größte Fibonacci-Zahl, die Sie mit BigInt korrekt berechnet haben? An
+welcher Stelle in der Fibonacci-Folge steht diese?
+                        </li>
+
+
+                    </ol>
+
+
+                    <div class="loesung">
+
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf4-3.html"></iframe>
+
+                    </div>
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen()" class="btn">HIER</button>,
+um den Code sichtbar zu machen</p>
+
+                        <pre class="CodeContainer" >
+                            <div id="Code2" style="display: none;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Uebung 4 Aufgabe 3&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        
+    &lt;h2&gt;Fibonacci &lt;/h2&gt;
+    &lt;p&gt;Die ersten 2000 Fibonacci-Zahlen&lt;/p&gt;
+    
+    &lt;table id="tabelle" &gt;
+    &lt;/table&gt;
+    &lt;script&gt;
+    
+    function fibonacci(){
+        var res = [];
+        var ergebnis = {
+            zahl1:BigInt(0),
+            zahl2:BigInt(1)
+        }
+            function add(zahl1 , zahl2){
+                ergebnis.zahl2 = zahl1 + zahl2;
+                ergebnis.zahl1 = zahl2;
+            }
+        
+            for(var t = 0; t &lt; 2000; t++){
+        
+                add(ergebnis.zahl1, ergebnis.zahl2);
+                res.push(ergebnis.zahl2);
+            }
+        return res;
+    }
+    
+    const endresu = fibonacci();
+        
+    endresu.forEach(function(x){
+        const zahlen = document.getElementById("tabelle");
+    
+        const elem1 = document.createElement("tr");
+        const elem = document.createElement("gt");
+        elem.innerHTML = x ;
+        elem1.appendChild(elem)
+        zahlen.appendChild(elem1);
+    })
+    
+    
+    
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+            </pre>
+  
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function CodeZeigen() {
+            const codeElem = document.getElementById("Code2");
+            const display2 = codeElem.style.display;
+
+            if (display2 === "none") {
+                codeElem.style.display = "block";
+
+            } else {
+                codeElem.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
