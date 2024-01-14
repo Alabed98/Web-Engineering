@@ -10,9 +10,10 @@
 <body>
 
 
-    <h1></h1>
+    <h1>Klammerpaare </h1>
+    <h2>Es wird geprüft, ob alle Klammerpaare korret sind. <br>Wenn Klammern nicht richtig geschachtelt sind, wird das Eingabefeld rot</h2>
     <form>
-        <label for="Eingabe">Geben Sie ein String ein!</label>
+        <label for="Eingabe">Geben Sie eine Zeichenkette ein, die beliebig geschachtelte Klammern enthält!</label>
         <input type="text" id="Eingabe" style="outline:none;">
 
     </form>
@@ -58,13 +59,7 @@
                 } else {
                     eingabeFeld.style.border = "";
                 }
-
-
-
-
         });
-
-
         eingabeFeld.addEventListener("keydown", function(){
             if(event.key === "Backspace"){
                 klammern.pop();
