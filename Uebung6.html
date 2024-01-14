@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+
+
+<header>
+<h1 class="titel">ECMAScript (ES)</h1>
+
+
+</header>
+<nav class="menue">
+
+
+<a href="">Themen</a>
+
+
+<div class="dropdow">
+<a href="">Aufgaben & Lösung</a>
+<div class="dropdow-content">
+<a href="#erste_Aufgabe">Aufgabe 1</a>
+  
+   
+</div>
+
+</div>
+</nav>
+
+
+<div class="main">
+
+<div class="content" id="erste_Aufgabe">
+<div class="card">
+<div class="inhalt">
+<h2>
+6.1 Klammerpaare
+</h2>
+
+<p>Schreiben Sie eine Webseite, in die man eine Zeichenkette mit beliebigen Buchstaben, Zahlen und Sonderzeichen eingeben kann, die beliebig geschachtelte Klammern [...], (...) und {...} enthält, sodass sofort geprüft wird, ob alle Klammerpaare korrekt geschachtelt sind. Das Eingabefeld der Zeichenkette soll rot gefärbt werden, wenn es ein Klammerpaar gibt, das falsch geschachtelt ist. Verwenden Sie für Ihre Tests die Funktion console.assert.</p>
+
+  
+<div class="loesung">
+<iframe class="tasks" src="assets/uebungsaufgaben/auf6-1.html"></iframe>
+
+</div>
+
+<div style="width:100%" class="CodeTeil">
+<h2>Hier ist der Html-Code meiner Lösung</h2>
+<p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()" class="btn">HIER</button>,
+um den Code sichtbar zu machen</p>
+<pre class="CodeContainer" >
+<div id="Code1" style="display: none;margin: 0;padding: 0;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Klammerpaare &lt;/h1&gt;
+    &lt;h2&gt;Es wird geprüft, ob alle Klammerpaare korret sind. &lt;br&gt;Wenn Klammern nicht richtig geschachtelt sind, wird das Eingabefeld rot&lt;/h2&gt;
+    &lt;form&gt;
+    &lt;label for="Eingabe"&gt;Geben Sie eine Zeichenkette ein, die beliebig geschachtelte Klammern enthält!&lt;/label&gt;
+    &lt;input type="text" id="Eingabe" style="outline:none;"&gt;
+
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        const eingabeFeld = document.getElementById("Eingabe");
+        let klammern = [];
+        let anzahl = 0;
+        let eingabeWert = [];
+
+        eingabeFeld.addEventListener("input", function () {
+        const eingabe = eingabeFeld.value;
+        const eingabe_array = [...eingabe];
+        console.log(eingabe_array[1]);
+
+        eingabeWert = eingabe_array;
+
+        let letztes_el = eingabe_array[eingabe_array.length - 1];
+
+        if (["{", "(", "["].includes(letztes_el)) {
+            klammern.push(letztes_el);
+            anzahl++;
+        }
+        else if (["]", "}", ")"].includes(letztes_el)) {
+        if (letztes_el === "]") {
+            vergleiche(klammern[klammern.length - 1], "[")
+        }
+        else if (letztes_el === "}") {
+            vergleiche(klammern[klammern.length - 1], "{")
+        }
+        else {
+            vergleiche(klammern[klammern.length - 1], "(")
+        }
+
+        }
+
+        if (klammern.length !== 0) {
+            eingabeFeld.style.border = "1px solid red";
+        } else {
+            eingabeFeld.style.border = "";
+        }
+        });
+        eingabeFeld.addEventListener("keydown", function(){
+        if(event.key === "Backspace"){
+            klammern.pop();
+        }
+        });
+
+        function vergleiche(letztes_elem, elem) {
+        if (letztes_elem === elem) {
+            klammern.pop();
+            eingabeWert.pop();
+            eingabeFeld.style.border = "";
+        }
+        else {
+            eingabeFeld.style.border = "1px solid red";
+        }
+        }
+
+        &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</div>
+</pre>
+</div>
+
+<script>
+function CodeZeigen1() {
+const codeElem = document.getElementById("Code1");
+const display2 = codeElem.style.display;
+
+if (display2 === "none") {
+codeElem.style.display = "block";
+
+} else {
+codeElem.style.display = "none";
+}
+}
+</script>
+
+
+
+</div>
+
+
+</div>
+</div>
+
+   
+</body>
+</html>
