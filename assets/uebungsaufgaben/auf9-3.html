@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .splieContent{
+            display: flex;
+            justify-content: center;
+        }
+        #Spielfeld {
+            max-width: 300px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+
+        .feld {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border: 1px solid black;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feld:hover{
+            background-color:#FF3169 ;
+        }
+
+        .feld:nth-child(-n+3) {
+            border-top: none;
+        }
+
+        .feld:nth-child(3n+3) {
+            border-right: none;
+        }
+
+        .feld:nth-child(n+7) {
+            border-bottom-style: none;
+        }
+
+        .feld:nth-child(3n+1) {
+            border-left-style: none;
+        }
+        .btn-cont{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn{
+            font-size: 19px;
+            padding: 10px 20px;
+            background-color: #FF3169;
+            color: white;
+            border:white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Tic-Tac-Toe</h1>
+
+    <div class="splieContent">
+    <div id="Spielfeld">
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+        <p class="feld"></p>
+   
+    </div>
+</div>
+    <div class="btn-cont">
+        <button class="btn" onclick="restart()">Restart</button>
+  
+   
+    </div>
+
+    <script>
+        let felder = document.querySelectorAll(".feld");
+        let spielEnde = false;
+        const x = '<svg width="100%" height="100%" viewBox="0 0 100 100"><line x1="25" y1="25" x2="75" y2="75" style="stroke:#78000B;stroke-width:2"/><line x1="75" y1="25" x2="25" y2="75" style="stroke:#78000B;stroke-width:2" /></svg>'
+
+        const o = '<svg width="100%" height="100%" viewBox="0 0 100 100">  <circle cx="50" cy="50" r="20" stroke="#00C3FF" stroke-width="3" fill="transparent" /></svg>'
+
+        let spieler = "A";
+        function turn() {
+            if (spieler === "A")
+                spieler = "B";
+            else {
+                spieler = "A"
+            }
+        }
+
+        function check(){
+            let winKopminations = [
+                [0,1,2],[3,4,5],[6,7,8],
+                [0,3,6],[1,4,7],[2,5,8],
+                [0,4,8],[2,4,6]
+            ]
+
+            for(kompination of winKopminations){
+                let [a,b,c] = kompination;
+                
+                if(felder[a].innerHTML != "" && felder[a].innerHTML === felder[b].innerHTML && felder[a].innerHTML === felder[c].innerHTML){
+                    felder[a].style.background="#059862";
+                    felder[b].style.background="#059862";
+                    felder[c].style.background="#059862";
+                    spielEnde =true;
+                    return true
+                }
+            }
+            return false
+        }
+        debugger;
+        function checkUnentschieden(){
+            if(spielEnde){
+                return true;
+            }
+
+            for(let i = 0; i < felder.length; i++){
+                if(felder[i].innerHTML === "" ){
+                 
+                    return true;
+                }
+            }
+            // felder.forEach(e => {
+            //     if(e.innerHTML === "" ){
+                 
+            //         return true;
+            //     }
+            // });
+             return false;
+            // if(unentschieden){
+
+            //     spielEnde = true;
+            // alert("Gameover Restart erforderlich")
+            // }
+        }
+
+        felder.forEach(event => {
+            event.addEventListener("click", () => {
+                if (event.innerHTML === "" && !spielEnde)
+                    if(spieler === "A" ){
+                        event.innerHTML = x;
+                        turn();
+                        if(check()){
+                            alert(`Spieler X hat gewonnen`);
+                           
+                        }
+                       
+                        if(!checkUnentschieden()){
+                            alert("Gameover Restart erforderlich")
+                        }
+                        
+                    
+                      
+                  
+                      
+                        
+                    }
+                else{
+                    event.innerHTML = o;  
+                    turn();
+                   
+                    if(check()){
+                            alert('Spieler O hat gewonnen')
+                        }
+                        if(!checkUnentschieden()){
+                            alert("Gameover Restart erforderlich")
+                        }
+                }
+            })
+        });
+
+        function restart(){
+            felder.forEach(e => {
+                e.innerHTML = "";
+                e.style.background = "";
+            })
+            spieler = "A";
+            spielEnde = false;
+        }
+
+
+      
+
+
+    </script>
+
+</body>
+
+</html>

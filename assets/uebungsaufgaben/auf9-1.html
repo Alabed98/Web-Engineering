@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>SVG Demo with Hyperlink</h1>
+<svg viewBox="0 0 300 190" id="svg_elem" style="background: #cb798d;">
+
+
+<text x="20" y="40" font-size="30" fill="white">Use</text>
+
+<line x1="20" y1="50" x2="93%" y2="50" style="stroke:white;stroke-width:2" />
+
+
+
+<text x="20" y="95" font-size="30" fill="white">The</text>
+
+<line x1="20" y1="105" x2="93%" y2="105" style="stroke:white;stroke-width:2" />
+
+<text x="20" y="150" font-size="30" fill="white">Platform</text>
+
+<line x1="20" y1="160" x2="93%" y2="160" style="stroke:white;stroke-width:2" />
+
+</svg>
+
+
+<script>
+    const svg_element = document.getElementById("svg_elem");
+
+    svg_element.addEventListener("mouseover", () =>
+    {
+    svg_element.setAttribute('viewBox',"0,0,150,190");
+    })
+
+    svg_element.addEventListener("mouseout", () =>
+    {
+    svg_element.setAttribute('viewBox',"0,0,300,190");
+    })
+</script>
+</body>
+</html>
+
