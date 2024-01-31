@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 9</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1 class="titel">Scalable Vector Graphics (SVG)</h1>
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+                <a href="#dritte_Aufgabe">Aufgabe 3</a>
+
+            </div>
+
+        </div>
+
+
+
+    </nav>
+
+
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        9.1 SVG Grafik von Hand erstellen
+                    </h2>
+
+                    <p>Codieren Sie eine HTML-Datei mit Inline SVG, sodass sich folgendes Aussehen ergibt:
+
+                    </p>
+                    <p>Fügen Sie als Hover-Effekt eine CSS-Animation hinzu, die die Größe der SVG-Grafik verdoppelt,
+                        wenn man mit dem Cursor über die Grafik geht.</p>
+
+                    <div class="loesung">
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf9-1.html"></iframe>
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()"
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
+                        <pre class="CodeContainer">
+            <div id="Code1" style="display: none;margin: 0;padding: 0;">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtDocument&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+    
+&lth1&gtSVG Demo with Hyperlink&lt/h1&gt
+&ltsvg viewBox="0 0 300 190" id="svg_elem" style="background: #cb798d;"&gt
+
+
+&lttext x="20" y="40" font-size="30" fill="white"&gtUse&lt/text&gt
+
+&ltline x1="20" y1="50" x2="93%" y2="50" style="stroke:white;stroke-width:2" /&gt
+
+
+
+&lttext x="20" y="95" font-size="30" fill="white"&gtThe&lt/text&gt
+
+&ltline x1="20" y1="105" x2="93%" y2="105" style="stroke:white;stroke-width:2" /&gt
+
+&lttext x="20" y="150" font-size="30" fill="white"&gtPlatform&lt/text&gt
+
+&ltline x1="20" y1="160" x2="93%" y2="160" style="stroke:white;stroke-width:2" /&gt
+
+&lt/svg&gt
+
+
+&ltscript&gt
+    const svg_element = document.getElementById("svg_elem");
+
+    svg_element.addEventListener("mouseover", () =&gt
+    {
+    svg_element.setAttribute('viewBox',"0,0,150,190");
+    })
+
+    svg_element.addEventListener("mouseout", () =&gt
+    {
+    svg_element.setAttribute('viewBox',"0,0,300,190");
+    })
+&lt/script&gt
+&lt/body&gt
+&lt/html&gt</div>
+            </pre>
+                    </div>
+
+                    <script>
+                        function CodeZeigen1() {
+                            const codeElem = document.getElementById("Code1");
+                            const display2 = codeElem.style.display;
+
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
+
+                            } else {
+                                codeElem.style.display = "none";
+                            }
+                        }
+                    </script>
+
+
+
+                </div>
+
+
+            </div>
+
+            <script>
+                function CodeZeigen1() {
+                    const codeElem = document.getElementById("Code1");
+                    const display2 = codeElem.style.display;
+
+                    if (display2 === "none") {
+                        codeElem.style.display = "block";
+
+                    } else {
+                        codeElem.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+
+
+        <div class="content" id="dritte_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        9.3 Interaktive SVG Grafik
+                    </h2>
+
+                    <p>Implementieren Sie das Spiel Tic-Tac-Toe als HTML-Datei mit Inline SVG, CSS und JS.
+
+
+
+                    </p>
+
+
+                    <div class="loesung">
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf9-3.html"></iframe>
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen2()"
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
+                        <pre class="CodeContainer">
+            <div id="Code2" style="display: none;margin: 0;padding: 0;">&lt!DOCTYPE html&gt
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtDocument&lt/title&gt
+
+    &ltstyle&gt
+        .splieContent{
+            display: flex;
+            justify-content: center;
+        }
+        #Spielfeld {
+            max-width: 300px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+
+        .feld {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border: 1px solid black;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feld:hover{
+            background-color:#FF3169 ;
+        }
+
+        .feld:nth-child(-n+3) {
+            border-top: none;
+        }
+
+        .feld:nth-child(3n+3) {
+            border-right: none;
+        }
+
+        .feld:nth-child(n+7) {
+            border-bottom-style: none;
+        }
+
+        .feld:nth-child(3n+1) {
+            border-left-style: none;
+        }
+        .btn-cont{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn{
+            font-size: 19px;
+            padding: 10px 20px;
+            background-color: #FF3169;
+            color: white;
+            border:white;
+            cursor: pointer;
+        }
+    &lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+    &lth1&gtTic-Tac-Toe&lt/h1&gt
+
+    &ltdiv class="splieContent"&gt
+    &ltdiv id="Spielfeld"&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+        &ltp class="feld"&gt&lt/p&gt
+   
+    &lt/div&gt
+&lt/div&gt
+    &ltdiv class="btn-cont"&gt
+        &ltbutton class="btn" onclick="restart()"&gtRestart&lt/button&gt
+  
+   
+    &lt/div&gt
+
+    &ltscript&gt
+        let felder = document.querySelectorAll(".feld");
+        let spielEnde = false;
+        const x = '&ltsvg width="100%" height="100%" viewBox="0 0 100 100"&gt&ltline x1="25" y1="25" x2="75" y2="75" style="stroke:#78000B;stroke-width:2"/&gt&ltline x1="75" y1="25" x2="25" y2="75" style="stroke:#78000B;stroke-width:2" /&gt&lt/svg&gt'
+
+        const o = '&ltsvg width="100%" height="100%" viewBox="0 0 100 100"&gt  &ltcircle cx="50" cy="50" r="20" stroke="#00C3FF" stroke-width="3" fill="transparent" /&gt&lt/svg&gt'
+
+        let spieler = "A";
+        function turn() {
+            if (spieler === "A")
+spieler = "B";
+            else {
+spieler = "A"
+            }
+        }
+
+        function check(){
+            let winKopminations = [
+[0,1,2],[3,4,5],[6,7,8],
+[0,3,6],[1,4,7],[2,5,8],
+[0,4,8],[2,4,6]
+            ]
+
+            for(kompination of winKopminations){
+let [a,b,c] = kompination;
+
+if(felder[a].innerHTML != "" && felder[a].innerHTML === felder[b].innerHTML && felder[a].innerHTML === felder[c].innerHTML){
+    felder[a].style.background="#059862";
+    felder[b].style.background="#059862";
+    felder[c].style.background="#059862";
+    spielEnde =true;
+    return true
+}
+            }
+            return false
+        }
+        debugger;
+        function checkUnentschieden(){
+            if(spielEnde){
+return true;
+            }
+
+            for(let i = 0; i &lt felder.length; i++){
+if(felder[i].innerHTML === "" ){
+ 
+    return true;
+}
+            }
+            // felder.forEach(e =&gt {
+            //     if(e.innerHTML === "" ){
+ 
+            //         return true;
+            //     }
+            // });
+             return false;
+            // if(unentschieden){
+
+            //     spielEnde = true;
+            // alert("Gameover Restart erforderlich")
+            // }
+        }
+
+        felder.forEach(event =&gt {
+            event.addEventListener("click", () =&gt {
+if (event.innerHTML === "" && !spielEnde)
+    if(spieler === "A" ){
+        event.innerHTML = x;
+        turn();
+        if(check()){
+            alert(`Spieler X hat gewonnen`);
+           
+        }
+       
+        if(!checkUnentschieden()){
+            alert("Gameover Restart erforderlich")
+        }
+        
+    
+      
+  
+      
+        
+    }
+else{
+    event.innerHTML = o;  
+    turn();
+   
+    if(check()){
+            alert('Spieler O hat gewonnen')
+        }
+        if(!checkUnentschieden()){
+            alert("Gameover Restart erforderlich")
+        }
+}
+            })
+        });
+
+        function restart(){
+            felder.forEach(e =&gt {
+e.innerHTML = "";
+e.style.background = "";
+            })
+            spieler = "A";
+            spielEnde = false;
+        }
+
+
+      
+
+
+    &lt/script&gt
+
+&lt/body&gt
+
+&lt/html&gt</div>
+            </pre>
+                    </div>
+
+                    <script>
+
+
+
+                        function CodeZeigen2() {
+                            const codeElem = document.getElementById("Code2");
+                            const display2 = codeElem.style.display;
+
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
+
+                            } else {
+                                codeElem.style.display = "none";
+                            }
+                        }
+                    </script>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
