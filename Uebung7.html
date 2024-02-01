@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 7</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+<style>
+    li{
+        padding-bottom: 10px;
+    }
+    .markiere{
+        color:#C7254E;background:#F9F2F4;
+    }
+</style>
+
+</head>
+<body>
+    
+
+
+    <header>
+        <h1 class="titel">Funktionale Programmierung</h1>
+
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        7.1 Funktionen in JavaScript
+                    </h2>
+
+
+                    <ul >
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">curry</span><span >&nbsp;(von Currying), die eine bin&auml;re Funktion und ein Argument nimmt, um daraus eine Funktion zu erzeugen, die ein zweites Argument entgegennimmt. Beispiele:&nbsp;</span><span class="markiere">add3 = curry(add, 3); add3(4)</span><span >&nbsp;ergibt&nbsp;</span><span class="markiere">7</span><span >&nbsp;und&nbsp;</span><span class="markiere">curry(mul, 5)(6)</span><span >&nbsp;ergibt&nbsp;</span><span class="markiere">30</span><span >.</span></li>
+
+                        <li ><span >Erzeugen Sie die&nbsp;</span><span class="markiere">inc</span><span >-Funktion mithilfe von&nbsp;</span><span class="markiere">addf</span><span >&nbsp;oder&nbsp;</span><span class="markiere">applyf</span><span >&nbsp;(aus Aufgabe 4.1) und&nbsp;</span><span class="markiere">curry</span><span >, ohne die Funktion&nbsp;</span><span class="markiere">inc</span><span >&nbsp;selbst zu implementieren.&nbsp;</span><span class="markiere">inc(x)</span><span >&nbsp;soll immer&nbsp;</span><span class="markiere">x + 1</span><span >&nbsp;zur&uuml;ckgeben und l&auml;sst sich nat&uuml;rlich auch direkt implementieren. Das ist aber hier nicht die Aufgabe. Vielleicht schaffen Sie es, drei Varianten der&nbsp;</span><span class="markiere">inc</span><span >-Implementierung zu schreiben?</span></li>
+
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">methodize</span><span >, die eine bin&auml;re Funktion (z.B.&nbsp;</span><span class="markiere">add</span><span >&nbsp;oder&nbsp;</span><span class="markiere">mul</span><span >) in eine un&auml;re Methode verwandelt. Nach&nbsp;</span><span class="markiere">Number.prototype.add = methodize(add)</span><span >&nbsp;soll&nbsp;</span><span class="markiere">(3).add(4)</span><span >&nbsp;genau&nbsp;</span><span class="markiere">7</span><span >&nbsp;ergeben.</span></li>
+
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">demethodize</span><span >, die eine un&auml;re Methode (z.B.&nbsp;</span><span class="markiere">add</span><span >&nbsp;oder&nbsp;</span><span class="markiere">mul</span><span >) in eine bin&auml;re Funktion umwandelt.&nbsp;</span><span class="markiere">demethodize(Number.prototype.add)(5, 6)</span><span >&nbsp;soll&nbsp;</span><span class="markiere">11</span><span >&nbsp;ergeben.</span></li>
+
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">twice</span><span >, die eine bin&auml;re Funktion in eine un&auml;re Funktion umwandelt, die den einen Parameter zweimal weiter reicht. Also z.B.&nbsp;</span><span class="markiere">var double = twice(add); double(11)</span><span >&nbsp;soll&nbsp;</span><span class="markiere">22</span><span >&nbsp;ergeben und&nbsp;</span><span class="markiere">var square = twice(mul); square(11)</span><span >&nbsp;soll&nbsp;</span><span class="markiere">mul(11,11) === 121</span><span >&nbsp;ergeben.</span></li>
+
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">composeu</span><span >, die zwei un&auml;re Funktionen in eine einzelne un&auml;re Funktion transformiert, die beide nacheinander aufruft. Also z.B. soll&nbsp;</span><span class="markiere">composeu(double, square)(3)</span><span >&nbsp;genau&nbsp;</span><span class="markiere">36</span><span >&nbsp;ergeben.</span></li>
+
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">composeb</span><span >, die zwei bin&auml;re Funktionen in eine einzelne Funktion transformiert, die beide nacheinander aufruft. Also z.B.&nbsp;</span><span class="markiere">composeb(add, mul)(2, 3, 5)</span><span >&nbsp;soll&nbsp;</span><span class="markiere">25</span><span >&nbsp;ergeben.</span></li>
+
+                        <li ><span >Schreiben Sie eine Funktion&nbsp;</span><span class="markiere">once</span><span >, die einer anderen Funktion nur einmal erlaubt, aufgerufen zu werden. Also z.B.&nbsp;</span><span class="markiere">add_once = once(add); add_once(3, 4)</span><span >&nbsp;soll beim ersten Mal&nbsp;</span><span class="markiere">7</span><span >&nbsp;ergeben, beim zweiten Mal soll jedoch&nbsp;</span><span class="markiere">add_once(3, 4)</span><span >&nbsp;einen Fehlerabbruch bewirken.</span></li>
+
+                        <li ><span >Schreiben Sie eine Fabrik-Funktion&nbsp;</span><span class="markiere">counterf</span><span >, die zwei Funktionen&nbsp;</span><span class="markiere">inc</span><span >&nbsp;und&nbsp;</span><span class="markiere">dec</span><span >&nbsp;berechnet, die einen Z&auml;hler hoch- und herunterz&auml;hlen. Also z.B.&nbsp;</span><span class="markiere">counter = counterf(10)</span><span >. Dann soll&nbsp;</span><span class="markiere">counter.inc()</span><span >&nbsp;genau&nbsp;</span><span class="markiere">11</span><span >&nbsp;und&nbsp;</span><span class="markiere">counter.dec()</span><span >&nbsp;wieder&nbsp;</span><span class="markiere">10</span><span >&nbsp;ergeben.</span></li>
+
+                        <li ><span >Schreiben Sie eine r&uuml;cknehmbare Funktion&nbsp;</span><span class="markiere">revocable</span><span >, die als Parameter eine Funktion nimmt und diese bei Aufruf ausf&uuml;hrt. Sobald die Funktion aber mit&nbsp;</span><span class="markiere">revoke()</span><span >&nbsp;zur&uuml;ckgenommen wurde, f&uuml;hrt ein erneuter Aufruf zu einem Fehler. Also z.B.:<br></span><span class="markiere">&nbsp;temp = revocable(alert);<br>&nbsp;temp.invoke(7); // f&uuml;hrt zu alert(7);<br>&nbsp;temp.revoke();<br>&nbsp;temp.invoke(8); // Fehlerabbruch!</span></li>
+
+                        <li ><span >Schreiben Sie ein &quot;Array Wrapper&quot;-Objekt mit den Methoden&nbsp;</span><span class="markiere">get</span><span >,&nbsp;</span><span class="markiere">store</span><span >&nbsp;und&nbsp;</span><span class="markiere">append</span><span >, sodass ein Angreifer keinen Zugriff auf das innere, private Array hat. Also z.B.:<br></span><span class="markiere">&nbsp;my_vector = vector();<br>&nbsp;my_vector.append(7);<br>&nbsp;my_vector.store(1, 8);<br>&nbsp;my_vector.get(0); // 7<br>&nbsp;my_vector.get(1); // 8</span></li>
+                    </ul>
+
+
+
+
+
+                    <div class="loesung">
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Meine Lösung</h2>
+                    
+                        <pre class="CodeContainer">
+<div id="Code1" style="margin: 0;padding: 0;">
+    const add = zahl1 => zahl2 => zahl1 + zahl2;
+    let auf1 = add(4); 
+    function curry(Funk , zahl2){
+        return Funk(zahl2);
+    }
+    console.log(curry(auf1, 3));
+    ------------------------------------------------
+    function addf(x){
+        return function(y){return x+y}
+    }
+    
+    function curry(Funk, zahl2){
+        zahl2 = 1;
+        return Funk(zahl2);
+    }
+    
+    function inc(x){
+    return(curry(addf(x)));
+    }
+    console.log(inc(3));
+    ------------------------------------------------
+    function add3(a, b){
+            return a+ b 
+    }
+    function methodize(Funk){
+        return function (y){
+            return Funk(this, y);
+        };
+    }
+    Number.prototype.add = methodize(add3);
+    let res = (3).add(4);
+    console.log(res);
+    -----------------------------------------------
+    function twice(Funk2){
+        return function (x){
+            return Funk2(x, x);
+        }
+    }
+    
+    let double =  twice(add3);
+    
+    console.log(double(11));
+     ----------------------------------------------
+    function composeu(double, square){
+    
+            return function(x){
+                return(square(double(x)))
+            };
+    }
+    -----------------------------------------------
+     function composeb(Funk1, Funk2){
+        return function(x,y,c){
+            return Funk2(c, Funk1(x,y));
+        }
+    }
+    -----------------------------------------------
+    let zahler = 0;
+    function once(Funk){
+            return function(...y){
+            if(zahler&lt1){     
+                    zahler++;
+                    return Funk(...y);
+                }
+                else {
+                    throw new Error('Die Funktion darf nur einmal aufgerufen werden.');
+                    }
+            }
+    }
+    const add_once = once(add);
+    console.log(add_once(2,3));
+    try {
+        console.log(add_once(3, 4));
+      } catch (error) {
+        console.error(error.message);
+      }
+    ----------------------------------------------
+    function counterf(x){
+        const Funktionen =  {
+            inc : function (){
+                return x + 1;
+            },
+            dec : function (){
+                return x - 1;
+            }
+        }
+    
+        return Funktionen;
+    let counter = counterf(10);
+    console.log(counter.inc());
+    console.log(counter.dec());
+    }
+</div>
+</pre>
+                    </div>
+
+            
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
