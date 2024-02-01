@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 10</title>
+        <link rel="stylesheet" href="assets/style.css">
+        
+
+        <style>
+            .aufgabe{
+                background-color: #f9f2f4;
+                border: 1px solid #c7254e;
+                color:#c7254e;
+                margin: 10px 0;
+                padding:0 10px;
+                & p {
+                    margin: 10px 0;
+                }
+
+                box-shadow: 0 0px 10px 0 rgba(255, 255, 255, 0.9);
+            }
+            .Loesung{
+                background-color: ;
+                border: 3px solid black;
+                text-align: left;
+                padding:0 10px ;
+                & p {
+                    margin: 10px 0;
+                }
+            }
+        </style>
+
+</head>
+<body>
+    
+
+    <header>
+        <h1 class="titel">TypeScript (TS)</h1>
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+                <a href="#zweite_Aufgabe">Aufgabe 2</a>
+
+            </div>
+
+        </div>
+
+
+
+    </nav>
+
+
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        10.1 Static classes in TypeScript
+                    </h2>
+
+                    <p>Gibt es in TypeScript statische Klassen? Erläutern Sie den Unterschied von TypeScript zu anderen objekt-orientierten, statisch typisierten Programmiersprachen wie Java und C#.
+
+
+                    </p>
+                   
+                 
+                    <h2>Meine Lösung: </h2>
+                    <div class="loesung">
+                        <div class="Loesung">
+                        <p>In TypeScript gibt es keine direkten statischen Klassen im Vergleich zu anderen objektorientierten</p>
+
+                        <p>TypeScript verwendet eine optionale statische Typisierung, was bedeutet, dass mann Typen für Variablen und Funktionen optional deklarieren kann.</p>
+                        
+                        <p>TypeScript-Code wird in JavaScript transpiliert und läuft in einer JavaScript-Laufzeitumgebung. Im Gegensatz dazu werden Java- und C#-Code in Bytecode übersetzt und in einer eigenen virtuellen Maschine ausgeführt</p>
+                    </div>
+                    </div>
+
+             
+
+
+
+                </div>
+
+
+            </div>
+
+         
+        </div>
+
+
+        <div class="content" id="zweite_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        10.2 Fehler finden mit TypeScript
+                    </h2>
+
+                    <p>Gegeben sei folgendes fehlerbehaftete JavaScript-Programm. Ergänzen Sie dieses um möglichst viele Typisierungen und übersetzen Sie es in ein TypeScript-Programm.
+
+                    </p>
+
+
+                    <div class="aufgabe">
+                        <p>const add = (x,y) => x+y;</p>
+                        <p>const equals = (x,y) => x===y;</p>
+
+                        <p>console.log( add(1,2) );</p>
+                        <p>console.log( add(true, true ) );</p>
+                        <p>console.log( add(true, false ) );</p>
+                        <p>var x = y = 1;</p>
+                        <p>console.log( add(equals(x,y), equals(y,x)) );</p>
+                    </div>
+                     <h2>Meine Lösung: </h2>
+                    <div class="loesung">
+
+                        <div class="Loesung">
+                            <p>Typfehler können im JavaScript-Code in den Funktionen add und equals auftreten, wenn die Funktionen mit unterschiedlichen Datentypen aufgerufen werden.</p> 
+
+                            <p>TypeScript kann Typfehler besser erkennen, indem man explizite Typen für die Funktionen deklariert.</p>
+                            
+                            <p> Der Code sieht dann in TypeScript so aus:</p>
+                            
+                            <ul>
+                            <li>const add = (x: number, y: number): number => x + y;</li>
+                            
+                            <li> const equals = (x: any, y: any): boolean => x === y;</li>
+                            
+                            <li>console.log(add(1, 2));</li>
+                            
+                            <li>console.log(add(true, true));</li>
+                            
+                            <li>console.log(add(true, false));</li>
+                            
+                            <li>var x = y = 1;</li>
+                            
+                            console.log(add(equals(x, y), equals(y, x)));</li>
+                        </ul>
+                            
+                            <p>Weitere Beispiele für TypeScript-Hilfen bei der Fehlersuche:</p>
+                            <ol>
+                            <li>Verhindern von unbeabsichtigter Verwendung von undefinierten Variablen.</li>
+                            
+                                <li> Früherkennung von Tippfehlern durch statische Typprüfung.</li>
+                            </ol>
+                        </div>
+                        
+
+                    </div>
+
+                   
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
