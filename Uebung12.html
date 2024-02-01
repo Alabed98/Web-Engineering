@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 12</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <h1 class="titel">TypeScript (TS)</h1>
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+
+
+            </div>
+
+        </div>
+
+
+
+    </nav>
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        12.1 Registrierung mit PHP
+                    </h2>
+
+                    <p>Erstellen Sie mit PHP ein Registrierungsformular. Speichern Sie die eingegebenen Daten persistent
+                        in einer Datei. Schreiben Sie Ihre PHP-Scripte so, dass es dabei zu keinen
+                        Nebenläufigkeitsartefakten (z.B. Lost Update) kommen kann, egal wie viele Nutzer sich
+                        gleichzeitig registrieren.
+
+
+                    </p>
+
+
+                    <div class="loesung">
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf12-1.html"></iframe>
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()"
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
+
+
+
+                        <pre class="CodeContainer">
+                                <div id="Code1" style="display: none;margin: 0;padding: 0;">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtDocument&lt/title&gt
+    &ltstyle&gt
+        input{
+            margin:5px 0;
+        }
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltform action="http://localhost:100/test/test.php" method="post" width="100%"&gt
+        &lttable width="100%"&gt
+            &lttr&gt
+                &lttd width="20%"&gt
+                    &ltlabel for="name"&gtName:&lt/label&gt
+                &lt/td&gt
+                &lttd width="80%"&gt
+
+                    &ltinput type="text" name="name" id="name"&gt&ltbr&gt
+                &lt/td&gt
+            &lt/tr&gt
+
+            &lttr&gt
+                &lttd width="20%"&gt
+                    &ltlabel for="password"&gtPassword:&lt/label&gt
+                &lt/td&gt
+                &lttd  width="80%"&gt
+
+                    &ltinput type="password" name="password" id="password"&gt&ltbr&gt
+                &lt/td&gt
+            &lt/tr&gt
+
+        &lt/table&gt
+   
+        &ltinput type="submit" name="submit"&gt
+
+    &lt/form&gt
+
+&lt/body&gt
+&lt/html&gt</div> </pre>
+
+                    </div>
+                    <script>
+                        function CodeZeigen1() {
+                            const codeElem = document.getElementById("Code1");
+                            const display2 = codeElem.style.display;
+
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
+
+                            } else {
+                                codeElem.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>
