@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung 11</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titel">NodeJS</h1>
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="">Themen</a>
+
+
+        <div class="dropdow">
+            <a href="">Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+        
+
+            </div>
+
+        </div>
+
+
+
+    </nav>
+
+
+    <div class="main">
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        11.1 Lokaler Webserver mit NodeJS
+                    </h2>
+
+                    <p>Erstellen Sie einen lokalen Webserver mit NodeJS. Reichen Sie als Lösung den JS-Code Ihrer server.js ein. Der Webserver soll über eine Schnittstelle verfügen, an die ein Client einen Namen senden kann und als Ergebnis dann mit einem Gruß antwortet. Beispiel: Der Client sendet "Mika" und der Server antwortet mit "Hallo Mika!".
+                    </p>
+                    
+
+                    <div class="loesung" >
+                     
+<iframe class="tasks"  style="display: flex; justify-content: center;align-items: center;" src="assets/uebungsaufgaben/auf11-1.html"></iframe>
+                          
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()"
+    class="btn">HIER</button>,
+um den Code sichtbar zu machen</p>
+                        <pre class="CodeContainer"><div id="Code1" style="display: none;margin: 0;padding: 0;">
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtAufgabe 1 von Uebung 11&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+    &ltform method="POST" action="http://localhost:3000"&gt
+        &ltlabel&gtName: &ltinput type="text" name="name"&gt&lt/label&gt
+        &ltinput type="submit"&gt
+      &lt/form&gt
+&lt/body&gt
+
+
+&lt!----Coder des Servers-----&gt
+const http = require('http');
+const url = require('url');
+
+http.createServer(function (req, res) {
+    let result = "";
+    req.on("data", chunk => {
+        result += chunk;
+    })
+
+    req.on("end", function() {
+        const obj= {};
+        result.split("&").forEach(param => {
+            const [key, value] = param.split("=");
+            obj[key] = value;
+        });
+        res.writeHead(200, {
+            'Content-Type': 'text/html'
+          });
+          res.write('Hallo ' + obj.name);
+          res.end();
+    });
+
+}).listen(3000);
+console.log("Server läuft!");
+                        </div></pre>
+                    </div>
+
+                    <script>
+                        function CodeZeigen1() {
+const codeElem = document.getElementById("Code1");
+const display2 = codeElem.style.display;
+
+if (display2 === "none") {
+    codeElem.style.display = "block";
+
+} else {
+    codeElem.style.display = "none";
+}
+                        }
+                    </script>
+
+
+
+                </div>
+
+
+            </div>
+
+            <script>
+                function CodeZeigen1() {
+                    const codeElem = document.getElementById("Code1");
+                    const display2 = codeElem.style.display;
+
+                    if (display2 === "none") {
+                        codeElem.style.display = "block";
+
+                    } else {
+                        codeElem.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+        </div>
+
+
+</body>
+</html>
