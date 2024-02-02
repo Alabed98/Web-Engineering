@@ -13,34 +13,42 @@
 
     <div class="content">
 
-        
-    <h1>Rednerliste</h1>
-    <form><label for="redner">Neuer Redner:</label>
-        <input type="text" id="redner">
-        <input type="button" value="Hinzufügen" onclick="NewRedner()">
-    </form>
 
-    <ol id="liste">
+        <h1>Rednerliste</h1>
+        <form><label for="redner">Neuer Redner:</label>
+            <input type="text" id="redner">
+            <input type="button" value="Hinzufügen" onclick="NewRedner()">
+        </form>
 
-    </ol>
+        <ol id="liste">
 
-</div>
+        </ol>
+
+    </div>
 
     <script>
         let interval_ID, sekunden, minuten, stunden;
         let li_id = 0;
-       
+
         function NewRedner() {
 
-            // Button id des vorherigen Eintrag
-             if(li_id != 0){
-                let button_id = "button" + (li_id); 
+            let rednerInput = document.getElementById("redner");
+            let redner = rednerInput.value.trim(); // Trim entfernt leerzeichen am Anfang und am Ende
+            if (redner === "") {
+      
+                alert("Bitte geben Sie einen gültigen Redner ein.");
+                return;
+            }
+
+
+            if (li_id != 0) {
+                let button_id = "button" + (li_id);
                 document.getElementById(button_id).innerHTML = "Start!";
             }
 
             li_id++;
-          
-            let redner = document.getElementById("redner").value;
+
+
 
             let li_eintrag = document.createElement("li");
             let span_eintrag = document.createElement("span");
@@ -56,64 +64,69 @@
 
             addButton(li_id);
 
-            stunden = 0; 
+            stunden = 0;
             minuten = 0;
             sekunden = 0;
 
-            if(!interval_ID){
-                interval_ID = setInterval( function(){
-                totalTime_fun(li_id)}, 1000);
+            if (!interval_ID) {
+                interval_ID = setInterval(function () {
+                    totalTime_fun(li_id)
+                }, 1000);
             }
-            else{
+            else {
                 clearInterval(interval_ID);
-                interval_ID = setInterval( function(){
-                totalTime_fun(li_id)}, 1000);
+                interval_ID = setInterval(function () {
+                    totalTime_fun(li_id)
+                }, 1000);
             }
-          
+
             totalTime_fun(li_id);
-            
-          
+
+
+
+
+
         }
-    
+
 
         function totalTime_fun(li_id) {
-          
-            if(sekunden > 59){
+
+            if (sekunden > 59) {
                 minuten++;
                 sekunden = 0;
             }
-            if(minuten > 59){
+            if (minuten > 59) {
                 stunden++;
                 minuten = 0;
             }
             sekunden++;
-            
-            document.getElementById("time" + li_id).innerText = `${stunden < 10 ? '0': ''}${stunden}:${minuten < 10 ? '0': ''}${minuten}:${sekunden < 10 ? '0': ''}${sekunden} `;
+
+            document.getElementById("time" + li_id).innerText = `${stunden < 10 ? '0' : ''}${stunden}:${minuten < 10 ? '0' : ''}${minuten}:${sekunden < 10 ? '0' : ''}${sekunden} `;
         }
 
-        function addButton(li_id){
+        function addButton(li_id) {
 
             let button = document.createElement("button");
             button.innerText = "Stop!";
             button.id = "button" + li_id;
-         
+
             document.getElementById(li_id).appendChild(button);
-            button.onclick = function(){
+            button.onclick = function () {
                 button_fun(button.id, li_id);
             };
         }
 
-        function button_fun(btn_id, li_id){
-            
+        function button_fun(btn_id, li_id) {
+
             let btn_content = document.getElementById(btn_id).textContent;
             let li_content = document.getElementById("time" + li_id).textContent;
 
-            if(btn_content === "Stop!"){
+            if (btn_content === "Stop!") {
                 clearInterval(interval_ID);
                 document.getElementById(btn_id).innerHTML = "Start!"
             }
 
-            else{
+            else {
                 clearInterval(interval_ID);
 
                 li_content = li_content.split(":");
@@ -126,13 +139,14 @@
                 [...document.querySelectorAll("button")].forEach(element => element.innerHTML = "Start!");
 
                 document.getElementById(btn_id).innerHTML = "Stop!"
-                
-                
-                interval_ID = setInterval( function(){
-                totalTime_fun(li_id)}, 1000);
-                
+
+
+                interval_ID = setInterval(function () {
+                    totalTime_fun(li_id)
+                }, 1000);
+
                 document.querySelectorall("button");
-               
+
             }
 
         }
