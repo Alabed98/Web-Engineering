@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7.2</title>
+</head>
+<body>
+    
+	<div id="content">
+
+	</div>
+	
+<script>
+	let text = "";
+
+	fetch('https://kaul.inf.h-brs.de/ccm/we/ws23/resources/assets/Plagiatsresolution.html')
+	.then(res => res.text())
+	.then (data => {
+
+		text = data.replace(/<[^>]*>/g, '');
+		
+	})
+	
+  fetch('https://raw.githubusercontent.com/stopwords-iso/stopwords-de/master/stopwords-de.txt')
+	.then(res => res.text())
+    .then(stopWords => {
+     const Words = text.split(" ");
+	 const filterWords = Words.filter(word => !stopWords.includes(word.toLowerCase()));
+	 
+	  
+	
+   		const word_Anzahl = filterWords.reduce((obj, word) => {
+			if (obj[word]) {
+    obj[word] = obj[word] + 1;
+			} else {
+    obj[word] = 1;
+}            return obj;
+        }, {});
+
+      const wordArray = Object.entries(word_Anzahl).map(([word, Anzahl]) => ({ word, Anzahl }));
+
+	 wordArray.sort((a, b) => b.Anzahl  - a.Anzahl );
+	 
+	 for(let i = 0 ; i < 3 ; i++){
+	 console.log(wordArray[i].word + " " +  wordArray[i].Anzahl); 
+
+	 let elem = document.getElementById("content");
+	 let new_elem = document.createElement("p");
+	 new_elem.innerHTML = wordArray[i].word + " " +  wordArray[i].Anzahl;
+	 elem.appendChild(new_elem)
+	 }
+
+	 
+	
+		});
+	  
+	
+
+	</script>
+</body>
+</html>
