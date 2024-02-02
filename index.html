@@ -19,14 +19,15 @@
             margin: 0;
             box-sizing: border-box;
             width: 100%;
-           
+
             background-color: rgba(0, 0, 0, 0.6);
             padding-bottom: 20px;
-            color:#02112d
+            color: #02112d
         }
 
         p {
             margin: 20px 0;
+
         }
 
         header {
@@ -73,10 +74,10 @@
         .menue a:hover {
 
             background-color: #02112d;
-            color:#c8d3e5;
+            color: #c8d3e5;
             display: flex;
             align-items: center;
-           
+
         }
 
         ul {
@@ -110,7 +111,7 @@
             cursor: pointer;
             margin: 0 20px;
             margin-top: 20px;
-          
+
 
         }
 
@@ -138,7 +139,7 @@
             border: 1px solid white;
             text-decoration: none;
             color: white;
-            
+
         }
 
         .btn:hover {
@@ -149,26 +150,34 @@
             ;
         }
 
+        h1 {
+            font-size: 2rem;
+            word-wrap: break-word;
+            overflow: hidden;
+            overflow-wrap: break-word;
+        }
 
         .dropdow-content {
             display: none;
             position: absolute;
             background-color: #02112d;
-            color:#c8d3e5;
-            & a{
-                color:#c8d3e5;
+            color: #c8d3e5;
+
+            & a {
+                color: #c8d3e5;
             }
 
-            &:hover , a{
+            &:hover,
+            a {
                 background-color: white;
-                color:black
+                color: black
             }
         }
 
         .dropdow:hover .dropdow-content,
         a {
             display: block;
-        
+
         }
 
         .einleitung {
@@ -184,12 +193,45 @@
 
         }
 
-        @media screen and (max-width:360px) {
-            .titel {
-                font-size: 2rem;
+        @media screen and (max-width: 768px) {
+            .card {
+                max-width: 100%;
+                margin: 0 0 20px;
             }
 
+            .card-content {
+                grid-template-rows: auto 1fr;
+            }
         }
+
+        @media screen and (max-width:360px) {
+            .titel {
+                font-size: 2.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+            .untertitel{
+                font-size: 2rem;
+            }
+        }
+
+
+        @media screen and (max-width:230px) {
+            .titel {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1rem;
+            }
+            .untertitel{
+                font-size: 1.5rem;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -199,11 +241,11 @@
     <nav class="menue">
 
 
-        <a href="">Themen</a>
+   
 
 
         <div class="dropdow">
-            <a href="">Übung & Lösung</a>
+            <a >Übung & Lösung</a>
             <div class="dropdow-content">
                 <a href="Uebung1.html" target="_blank">Übungsblatt 1</a>
                 <a href="Uebung2.html" target="_blank">Übungsblatt 2</a>
@@ -232,7 +274,7 @@
     </header>
 
 
-    <div class="einleitung" >
+    <div class="einleitung">
 
         <div>
             <img src="" alt="">
@@ -240,11 +282,14 @@
 
         <div>
 
-            <h1 >Herzlich willkommen auf meiner Webseite!<br></h1>
-            <p  > Hier präsentiere ich meine Lösungen für Aufgaben im
-                Bereich HTML, CSS und JavaScript, die im Rahmen der Veranstaltung "Einführung in Web-Engineering" entstanden
-                sind. Jede Aufgabe wird mit ihrer zugehörigen Aufgabenstellung und der entsprechenden Lösung dargestellt.
-                Tauche ein und erkunde meine Umsetzungen für eine praxisnahe Auseinandersetzung mit den Themen. Viel Freude
+            <h1>Herzlich willkommen auf meiner Webseite!<br></h1>
+            <p> Hier präsentiere ich meine Lösungen für Aufgaben im
+                Bereich HTML, CSS und JavaScript, die im Rahmen der Veranstaltung "Einführung in Web-Engineering"
+                entstanden
+                sind. Jede Aufgabe wird mit ihrer zugehörigen Aufgabenstellung und der entsprechenden Lösung
+                dargestellt.
+                Tauche ein und erkunde meine Umsetzungen für eine praxisnahe Auseinandersetzung mit den Themen. Viel
+                Freude
                 beim Entdecken!</p>
 
         </div>
@@ -256,22 +301,22 @@
 
         <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 1: HTTP, URI und HTML
                     </h1>
                 </div>
-             
+
                 <div>
 
                     <p style="margin-top: 30px;">
 
 
 
-                        <a href="Uebung1.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung1.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
         </div>
 
@@ -283,31 +328,32 @@
 
                 </div>
 
-            <div>
-                <p style="margin-top: 30px;">
+                <div>
+                    <p style="margin-top: 30px;">
 
 
 
-                    <a href="Uebung2.html" class="btn" >Meine Lösung</a>
-                </p>
-            </div>
+                        <a href="Uebung2.html" class="btn">Meine Lösung</a>
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <div>
-                    <h1>Übung 3: Responsiv  Webdesign (RWD)
+                    <h1>Übung 3: Responsiv Webdesign (RWD)
                     </h1>
                 </div>
 
-            <div>
-                <p style="margin-top: 30px;">
+                <div>
+                    <p style="margin-top: 30px;">
 
 
 
-                    <a href="Uebung3.html" class="btn" >Meine Lösung</a>
-                </p></div>
+                        <a href="Uebung3.html" class="btn">Meine Lösung</a>
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -315,55 +361,58 @@
         <div class="card">
             <div class="card-content">
                 <div>
-                <h1>Übung 4: JavaScript (JS)
+                    <h1>Übung 4: JavaScript (JS)
 
 
-                </h1>
-            </div>
-       
-            <div>
-                <p style="margin-top: 30px;">
+                    </h1>
+                </div>
 
-
-
-                    <a href="Uebung4.html" class="btn" >Meine Lösung</a>
-                </p></div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-content">
                 <div>
-                <h1>Übung 5: Document Object Model (DOM)
-                </h1>
-            </div>
-          
-            <div>
-                <p style="margin-top: 30px;">
+                    <p style="margin-top: 30px;">
 
 
 
-                    <a href="Uebung5.html" class="btn" >Meine Lösung</a>
-                </p></div>
+                        <a href="Uebung4.html" class="btn">Meine Lösung</a>
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <div>
-                <h1>Übung 6: ECMAScript (ES)
+                    <h1>Übung 5: Document Object Model (DOM)
+                    </h1>
+                </div>
+
+                <div>
+                    <p style="margin-top: 30px;">
 
 
-                </h1>
+
+                        <a href="Uebung5.html" class="btn">Meine Lösung</a>
+                    </p>
+                </div>
             </div>
-            
-            <div>
-                <p style="margin-top: 30px;">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div>
+                    <h1>Übung 6: ECMAScript (ES)
+
+
+                    </h1>
+                </div>
+
+                <div>
+                    <p style="margin-top: 30px;">
 
 
 
-                    <a href="Uebung6.html" class="btn" >Meine Lösung</a>
-                </p></div>
+                        <a href="Uebung6.html" class="btn">Meine Lösung</a>
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -373,11 +422,11 @@
 
         <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 7: Funktionale Programmierung
                     </h1>
                 </div>
-          
+
 
                 <div>
 
@@ -385,58 +434,61 @@
 
 
 
-                        <a href="Uebung7.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung7.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
-        </div>   <div class="card">
+        </div>
+        <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 8: Asynchrones JavaScript
                     </h1>
                 </div>
-             
+
                 <div>
 
                     <p style="margin-top: 30px;">
 
 
 
-                        <a href="Uebung8.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung8.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
-        </div>   <div class="card">
+        </div>
+        <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 9: <br>SVG
                     </h1>
                 </div>
-             
+
                 <div>
 
                     <p style="margin-top: 30px;">
 
 
 
-                        <a href="Uebung9.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung9.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
-        </div>   <div class="card">
+        </div>
+        <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 10: TypeScript (TS)
                     </h1>
                 </div>
-             
-               
+
+
 
                 <div>
 
@@ -444,20 +496,21 @@
 
 
 
-                        <a href="Uebung10.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung10.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
-        </div>   <div class="card">
+        </div>
+        <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 11:<br> Node.js
                     </h1>
                 </div>
-             
-            
+
+
 
                 <div>
 
@@ -465,30 +518,31 @@
 
 
 
-                        <a href="Uebung11.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung11.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
-        </div>   <div class="card">
+        </div>
+        <div class="card">
             <div class="card-content">
-                <div >
+                <div>
                     <h1>Übung 12: <br>PHP
                     </h1>
                 </div>
-             
+
                 <div>
 
                     <p style="margin-top: 30px;">
 
 
 
-                        <a href="Uebung12.html" class="btn" >Meine Lösung</a>
+                        <a href="Uebung12.html" class="btn">Meine Lösung</a>
                     </p>
                 </div>
-            
-              
+
+
             </div>
         </div>
 
