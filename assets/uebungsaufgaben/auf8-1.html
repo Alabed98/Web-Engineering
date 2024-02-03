@@ -45,7 +45,7 @@ fetch("http://localhost:8080/B.txt")
 
             let elem = document.createElement("p");
 
-            elem.innerHTML = daten1[i] + ' ' + daten2[i];
+            elem.innerHTML = `<strong>Satz aus Text1 </strong> ${daten1[i]} <strong>Satz aus Text2 </strong>${daten2[i]}`;
 
             document.getElementById("text").appendChild(elem);
 
