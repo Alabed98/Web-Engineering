@@ -42,7 +42,7 @@
 
 
             if (li_id != 0) {
-                let button_id = "button" + (li_id);
+                let button_id = `button${li_id}` ;
                 document.getElementById(button_id).innerHTML = "Start!";
             }
 
@@ -54,7 +54,7 @@
             let span_eintrag = document.createElement("span");
 
             li_eintrag.id = li_id;
-            span_eintrag.id = "time" + li_id;
+            span_eintrag.id = `time${li_id}`;
             li_eintrag.innerText = redner + " ";
 
             li_eintrag.appendChild(span_eintrag);
@@ -101,14 +101,14 @@
             }
             sekunden++;
 
-            document.getElementById("time" + li_id).innerText = `${stunden < 10 ? '0' : ''}${stunden}:${minuten < 10 ? '0' : ''}${minuten}:${sekunden < 10 ? '0' : ''}${sekunden} `;
+            document.getElementById(`time${li_id}`).innerText = `${stunden < 10 ? '0' : ''}${stunden}:${minuten < 10 ? '0' : ''}${minuten}:${sekunden < 10 ? '0' : ''}${sekunden} `;
         }
 
         function addButton(li_id) {
 
             let button = document.createElement("button");
             button.innerText = "Stop!";
-            button.id = "button" + li_id;
+            button.id = `button${li_id}`;
 
             document.getElementById(li_id).appendChild(button);
             button.onclick = function () {
@@ -119,7 +119,7 @@
         function button_fun(btn_id, li_id) {
 
             let btn_content = document.getElementById(btn_id).textContent;
-            let li_content = document.getElementById("time" + li_id).textContent;
+            let li_content = document.getElementById(`time${li_id}`).textContent;
 
             if (btn_content === "Stop!") {
                 clearInterval(interval_ID);
@@ -148,7 +148,6 @@
                 document.querySelectorall("button");
 
             }
-
         }
     </script>
 
