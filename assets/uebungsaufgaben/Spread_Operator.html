@@ -1,0 +1,85 @@
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtSpread-Operator&lt/title&gt
+
+
+
+&lt/head&gt
+
+&ltbody&gt
+    &ltdiv id="komp1"&gt&lt/div&gt
+    &ltdiv id="komp2"&gt&lt/div&gt
+    &ltscript&gt
+        // Arrays kopieren und aneinander hängen
+
+        let profs = [590120, 234030, 238324, 238235];
+        let studenten = [909999, 909955, 909944];
+
+        let hochschulangehoeriger = [393923, 393838, profs, studenten]
+
+
+
+        let hochschulangehoeriger2 = [393923, 393838, ...profs, ...studenten]
+
+
+        console.log(hochschulangehoeriger);
+        // Ausgabe: [393923, 393838, Array(4), Array(3)]
+
+        console.log(hochschulangehoeriger2);
+        // Ausgabe: [393923, 393838, 590120, 234030, 238324, 238235, 909999, 909955, 909944]
+
+        // ---------------------------------------
+
+
+        // Objekte kompenieren
+
+        let namen = { vorname: "Jan", nachname: "Mustermann" };
+        let anschrift = { strasse: "Meckenheimerstr", hausnummer: 11 };
+
+        let mitarbeiter = { pers_nr: 888888, namen, anschrift }
+
+
+
+        let mitarbeiter2 = { pers_nr: 888888, ...namen, ...anschrift }
+
+
+
+        console.log(mitarbeiter);
+        // Ausgabe: {pers_nr: 888888, namen: {…}, anschrift: {…}}
+
+        console.log(mitarbeiter2);
+        // Ausgabe: {pers_nr: 888888, vorname: 'Jan', nachname: 'Mustermann', strasse: 'Meckenheimerstr', hausnummer: 11}
+
+        // ---------------------------------------
+        // Nordlist in Array umwandeln 
+
+        let name = { vorname: "Jan", nachname: "Mustermann" };
+        console.log(name);
+
+        const elements = document.querySelectorAll("div");
+
+        console.log(elements);
+
+        // Ausgabe:  NodeList(2) [div#parent, div#komp2]
+
+        console.log([...elements]);
+        // Ausgabe: [div#parent, div#komp2]
+
+        // ---------------------------------------
+
+        // String in einem Array Verteilen
+
+
+        const str = "Hello";
+
+        const charArray = [...str];
+        console.log(charArray);
+        // Ausgabe: ['H', 'e', 'l', 'l', 'o']
+    &lt/script&gt
+&lt/body&gt
+
+&lt/html&gt
