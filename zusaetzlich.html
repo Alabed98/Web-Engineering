@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zusätliche Aufgaben</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titel">Zusätliche Aufgaben</h1>
+
+    </header>
+    <nav class="menue">
+
+
+        <a href="index.html">Startseite</a>
+
+
+
+        <div class="dropdow">
+            <a>Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="main">
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        „Spread“-Operator
+                    </h2>
+                    <h3 style="text-align: center;">Kurzer Erklärartikel zu „Spread“-Operator mit Beispiel. </h3>
+                    <p>
+
+                        Der Spread-Operator in JavaScript wurde mit ECMAScript 6 (ES6) eingeführt und ermöglicht das
+                        Verteilen von Elementen eines Iterables (wie Arrays, Strings oder Objekte) auf eine andere
+                        Iterable oder einen Funktionsaufruf. Durch die Verwendung von drei Punkten "..." gefolgt von
+                        einem Ausdruck oder einer Iterable wird der Spread-Operator markiert. Dieser Operator stellt ein
+                        leistungsstarkes Werkzeug dar, das eine präzise und flexible Möglichkeit bietet, mit Daten in
+                        JavaScript zu arbeiten.
+
+
+                    </p>
+
+                    <p>Was kann man genau mit dem Spread-Operator machen?
+                    </p>
+
+
+                    <ul>
+                        <li>Man kann Arrays kopieren und aneinander hängen</li>
+                        <li>Objekte miteinander kombinieren
+                        </li>
+                        <li>Nordlist in Array umwandeln
+                        </li>
+
+                        <li>String in Array verteilen</li>
+                    </ul>
+
+
+
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Meine Lösung</h2>
+
+                        <pre class="CodeContainer">
+<div  style="margin: 0;padding: 0;">
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+
+&lthead&gt
+&ltmeta charset="UTF-8"&gt
+&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+&lttitle&gtSpread-Operator&lt/title&gt
+
+
+
+&lt/head&gt
+
+&ltbody&gt
+&ltdiv id="komp1"&gt&lt/div&gt
+&ltdiv id="komp2"&gt&lt/div&gt
+&ltscript&gt
+// Arrays kopieren und aneinander hängen
+
+let profs = [590120, 234030, 238324, 238235];
+let studenten = [909999, 909955, 909944];
+
+let hochschulangehoeriger = [393923, 393838, profs, studenten]
+let hochschulangehoeriger2 = [393923, 393838, ...profs, ...studenten]
+
+
+console.log(hochschulangehoeriger);
+// Ausgabe: [393923, 393838, Array(4), Array(3)]
+
+console.log(hochschulangehoeriger2);
+// Ausgabe: [393923, 393838, 590120, 234030, 238324, 238235, 909999, 909955, 909944]
+
+// ---------------------------------------
+
+// Objekte kompenieren
+
+let namen = { vorname: "Jan", nachname: "Mustermann" };
+let anschrift = { strasse: "Meckenheimerstr", hausnummer: 11 };
+
+let mitarbeiter = { pers_nr: 888888, namen, anschrift }
+let mitarbeiter2 = { pers_nr: 888888, ...namen, ...anschrift }
+
+
+console.log(mitarbeiter);
+// Ausgabe: {pers_nr: 888888, namen: {…}, anschrift: {…}}
+
+console.log(mitarbeiter2);
+// Ausgabe: {pers_nr: 888888, vorname: 'Jan', nachname: 'Mustermann', strasse: 'Meckenheimerstr', hausnummer: 11}
+
+// ---------------------------------------
+// Nordlist in Array umwandeln 
+
+let name = { vorname: "Jan", nachname: "Mustermann" };
+console.log(name);
+
+const elements = document.querySelectorAll("div");
+
+console.log(elements);
+
+// Ausgabe:  NodeList(2) [div#komp1, div#komp2]
+
+console.log([...elements]);
+// Ausgabe: [div#komp1, div#komp2]
+
+// ---------------------------------------
+
+// String in einem Array Verteilen
+
+const str = "Hello";
+
+const charArray = [...str];
+console.log(charArray);
+// Ausgabe: ['H', 'e', 'l', 'l', 'o']
+
+&lt/script&gt
+&lt/body&gt
+
+&lt/html&gt
+</div>
+</pre>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
