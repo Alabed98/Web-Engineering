@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uebung 11</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
     <header>
         <h1 class="titel">NodeJS</h1>
@@ -22,7 +24,7 @@
             <a>Aufgaben & Lösung</a>
             <div class="dropdow-content">
                 <a href="#erste_Aufgabe">Aufgabe 1</a>
-        
+
 
             </div>
 
@@ -41,21 +43,25 @@
                         11.1 Lokaler Webserver mit NodeJS
                     </h2>
 
-                    <p>Erstellen Sie einen lokalen Webserver mit NodeJS. Reichen Sie als Lösung den JS-Code Ihrer server.js ein. Der Webserver soll über eine Schnittstelle verfügen, an die ein Client einen Namen senden kann und als Ergebnis dann mit einem Gruß antwortet. Beispiel: Der Client sendet "Mika" und der Server antwortet mit "Hallo Mika!".
+                    <p>Erstellen Sie einen lokalen Webserver mit NodeJS. Reichen Sie als Lösung den JS-Code Ihrer
+                        server.js ein. Der Webserver soll über eine Schnittstelle verfügen, an die ein Client einen
+                        Namen senden kann und als Ergebnis dann mit einem Gruß antwortet. Beispiel: Der Client sendet
+                        "Mika" und der Server antwortet mit "Hallo Mika!".
                     </p>
-                    
 
-                    <div class="loesung" >
-                     
-<iframe class="tasks"  style="display: flex; justify-content: center;align-items: center;" src="assets/uebungsaufgaben/auf11-1.html"></iframe>
-                          
+
+                    <div class="loesung">
+
+                        <iframe class="tasks" style="display: flex; justify-content: center;align-items: center;"
+                            src="assets/uebungsaufgaben/auf11-1.html"></iframe>
+
                     </div>
 
                     <div style="width:100%" class="CodeTeil">
                         <h2>Hier ist der Html-Code meiner Lösung</h2>
                         <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()"
-    class="btn">HIER</button>,
-um den Code sichtbar zu machen</p>
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
                         <pre class="CodeContainer"><div id="Code1" style="display: none;margin: 0;padding: 0;">
 &lt!DOCTYPE html&gt
 &lthtml lang="en"&gt
@@ -98,21 +104,22 @@ http.createServer(function (req, res) {
 }).listen(3000);
 console.log("Server läuft!");
                         </div></pre>
-                    </div>
-
+                        
                     <script>
                         function CodeZeigen1() {
-const codeElem = document.getElementById("Code1");
-const display2 = codeElem.style.display;
+                            const codeElem = document.getElementById("Code1");
+                            const display2 = codeElem.style.display;
 
-if (display2 === "none") {
-    codeElem.style.display = "block";
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
 
-} else {
-    codeElem.style.display = "none";
-}
+                            } else {
+                                codeElem.style.display = "none";
+                            }
                         }
                     </script>
+                    </div>
+
 
 
 
@@ -121,22 +128,11 @@ if (display2 === "none") {
 
             </div>
 
-            <script>
-                function CodeZeigen1() {
-                    const codeElem = document.getElementById("Code1");
-                    const display2 = codeElem.style.display;
 
-                    if (display2 === "none") {
-                        codeElem.style.display = "block";
-
-                    } else {
-                        codeElem.style.display = "none";
-                    }
-                }
-            </script>
         </div>
-        </div>
+    </div>
 
 
 </body>
+
 </html>
