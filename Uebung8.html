@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
+
 <body>
     <header>
         <h1 class="titel">Asynchrones JavaScript</h1>
@@ -16,43 +18,52 @@
 
 
         <a href="index.html">Startseite</a>
-        
-        
+
+
         <div class="dropdow">
-        <a >Aufgaben & Lösung</a>
-        <div class="dropdow-content">
-        <a href="#erste_Aufgabe">Aufgabe 1</a>
-          
-           
+            <a>Aufgaben & Lösung</a>
+            <div class="dropdow-content">
+                <a href="#erste_Aufgabe">Aufgabe 1</a>
+                <a href="#zweite_Aufgabe">Aufgabe 2</a>
+
+
+
+            </div>
+
         </div>
-        
-        </div>
-        </nav>
+    </nav>
 
 
-        
-<div class="main">
 
-    <div class="content" id="erste_Aufgabe">
-    <div class="card">
-    <div class="inhalt">
-    <h2>
-        8.1 Promises
-    </h2>
-    
-    <p>Erstellen Sie auf Ihrem lokalen Server (localhost) zwei Text-Dateien A.txt und B.txt mit ungefähr gleich vielen Zeilen. Laden Sie mit der fetch-API parallel beide Text-Dateien vom Server. Geben Sie auf einer Webseite den Inhalt beider Dateien zeilenweise aus, wobei der Anfang der Zeile aus A.txt und das Ende aus B.txt stammen soll. Die beiden Dateien sollen also zeilenweise konkateniert werden. Erzielen Sie max. Geschwindigkeit durch maximale Parallelität. Achten Sie gleichzeitig auf Korrektheit. Verwenden Sie dabei ausschließlich die Promise-API ohne async/await.</p>
-    
-      
-    <div class="loesung">
-    <iframe class="tasks" src="assets/uebungsaufgaben/auf8-1.html"></iframe>
-    
-    </div>
-    
-    <div style="width:100%" class="CodeTeil">
-    <h2>Hier ist der Html-Code meiner Lösung</h2>
-    <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()" class="btn">HIER</button>,
-    um den Code sichtbar zu machen</p>
-    <pre class="CodeContainer" ><div id="Code1" style="display: none;margin: 0;padding: 0;">
+    <div class="main">
+
+        <div class="content" id="erste_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        8.1 Promises
+                    </h2>
+
+                    <p>Erstellen Sie auf Ihrem lokalen Server (localhost) zwei Text-Dateien A.txt und B.txt mit ungefähr
+                        gleich vielen Zeilen. Laden Sie mit der fetch-API parallel beide Text-Dateien vom Server. Geben
+                        Sie auf einer Webseite den Inhalt beider Dateien zeilenweise aus, wobei der Anfang der Zeile aus
+                        A.txt und das Ende aus B.txt stammen soll. Die beiden Dateien sollen also zeilenweise
+                        konkateniert werden. Erzielen Sie max. Geschwindigkeit durch maximale Parallelität. Achten Sie
+                        gleichzeitig auf Korrektheit. Verwenden Sie dabei ausschließlich die Promise-API ohne
+                        async/await.</p>
+
+
+                    <div class="loesung">
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf8-1.html"></iframe>
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()"
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
+                        <pre class="CodeContainer"><div id="Code1" style="display: none;margin: 0;padding: 0;">
 &lt!DOCTYPE html&gt
 &lthtml lang="en"&gt
 &lthead&gt
@@ -61,7 +72,7 @@
     &lttitle>Document&lt/title&gt
 &lt/head&gt
 &ltbody&gt
-            
+
         
     &ltdiv style="max-width: 800px; width: 100%;" id="text"&gt
         
@@ -69,7 +80,7 @@
         
         
     &ltscript&gt
-             
+ 
         
     Promise.all([fetch("http://localhost:8080/A.txt")
     .then(content => content.text()),
@@ -86,26 +97,26 @@
     let i = 0;
         
     datenLesen(minLaenge, content1, content2);
-            
+
     if(content1 > minLaenge){
         datenLesen(content1.length, content1, content2);
     }
         else if(content2 > minLaenge){
-            datenLesen(content2.length, content1, content2);
+datenLesen(content2.length, content1, content2);
         }
         
         function datenLesen (laenge, daten1, daten2){
-            
-            for(;i &lt laenge; i++){
+
+for(;i &lt laenge; i++){
         
-                let elem = document.createElement("p");
+    let elem = document.createElement("p");
         
-                elem.innerHTML = daten1[i] + ' ' + daten2[i];
+    elem.innerHTML = daten1[i] + ' ' + daten2[i];
         
-                document.getElementById("text").appendChild(elem);
+    document.getElementById("text").appendChild(elem);
         
-                 
-            }
+     
+}
         }
     })
         
@@ -113,29 +124,138 @@
 &lt/script&gt
 &lt/body&gt
 &lt/html&gt
-    </div></pre></div>
+    </div></pre>
+                    </div>
+
+                    <script>
+                        function CodeZeigen1() {
+                            const codeElem = document.getElementById("Code1");
+                            const display2 = codeElem.style.display;
+
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
+
+                            } else {
+                                codeElem.style.display = "none";
+                            }
+                        }
+                    </script>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="content" id="zweite_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        8.2 async/await
+                    </h2>
+
+                    <p>Lösen Sie die letzte Aufgabe mit async/await statt Promise.
+
+                    </p>
+
+
+                    <div class="loesung">
+                        <iframe class="tasks" src="assets/uebungsaufgaben/auf8-2.html"></iframe>
+
+                    </div>
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen2()"
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
+                        <pre class="CodeContainer"><div id="Code2" style="display: none;margin: 0;padding: 0;">
+&lt!DOCTYPE html&lg
+&lthtml lang="en"&lg
+&lthead&lg
+    &ltmeta charset="UTF-8"&lg
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&lg
+    &lttitle&lgDocument&lt/title&lg
+&lt/head&lg
+&ltbody&lg
+    &ltdiv style="max-width: 800px; width: 100%;" id="text"&lg
+
+    &lt/div&lg
+
+
+    &ltscript&lg
+
+async function data (){
+    const daten1 = await fetch("http://localhost:8080/A.txt");
+    const inhalt1 = await daten1.text();
+
+    const daten2 = await fetch("http://localhost:8080/B.txt");
+    const inhalt2 = await daten2.text();
+
+    const content1 = inhalt1.split('\n');
+    const content2 = inhalt2.split('\n');
+
+   
+    const minLaenge = Math.min(content1.length, content2.length);
+
+    let i = 0;
+
+    datenLesen(minLaenge, content1, content2);
     
-    <script>
-    function CodeZeigen1() {
-    const codeElem = document.getElementById("Code1");
-    const display2 = codeElem.style.display;
-    
-    if (display2 === "none") {
-    codeElem.style.display = "block";
-    
-    } else {
-    codeElem.style.display = "none";
+    if(content1 &lg minLaenge){
+        datenLesen(content1.length, content1, content2);
     }
+    else if(content2 &lg minLaenge){
+        datenLesen(content2.length, content1, content2);
     }
-    </script>
+
+    function datenLesen (laenge, daten1, daten2){
     
-    
-    
-    </div>
-    
-    
-    </div>
-    </div>
+        for(;i &lt laenge; i++){
+
+let elem = document.createElement("p");
+
+elem.innerHTML = daten1[i] + ' ' + daten2[i];
+
+document.getElementById("text").appendChild(elem);
+
+        }
+    } 
+
+}
+
+data();
+    &lt/script&lg
+&lt/body&lg
+&lt/html&lg
+        </div></pre>
+                    </div>
+
+                    <script>
+                        function CodeZeigen2() {
+                            const codeElem = document.getElementById("Code2");
+                            const display2 = codeElem.style.display;
+
+                            if (display2 === "none") {
+                                codeElem.style.display = "block";
+
+                            } else {
+                                codeElem.style.display = "none";
+                            }
+                        }
+                    </script>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
