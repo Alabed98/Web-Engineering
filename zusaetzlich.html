@@ -26,6 +26,7 @@
             <a>Aufgaben & Lösung</a>
             <div class="dropdow-content">
                 <a href="#erste_Aufgabe">Aufgabe 1</a>
+                <a href="#zweite_Aufgabe">Aufgabe 1</a>
 
 
             </div>
@@ -165,7 +166,54 @@ console.log(charArray);
 
             </div>
         </div>
+   
+        <div class="content" id="zweite_Aufgabe">
+            <div class="card" style="min-height: 450px;">
+                <div class="inhalt">
+                    <h2>
+                        Translate, Rotate und Scale
+                    </h2>
+                    <h3 style="text-align: center;">Kurze Demonstration von translate, rotate und scale </h3>
+                
+                    <style>
+                        @keyframes boxAnimation {
+                        0% {
+                            transform: translate(0, 0)  scale(1);
+                        }
+                        25% {
+                            transform: translate(100px, 100px) rotate(90deg) scale(2);
+                            background-color: #f54b4b;
+            
+                        }
+            
+                        50% {
+                            transform: translate(0px, 100px) scale(2);
+                            background-color: #a83333;
+                        }
+                        75% {
+                            transform: translate(100px, 0px) rotate(90deg) scale(1);
+                            background-color: #ce3e3e;
+                        }
+                    
+                    } 
+              
+                    .box{
+                        width: 100px;
+                        height: 100px;
+                        background-color: #ff4500;
+                        animation: boxAnimation 4s ease-in-out;
+            
+                    }
+                        </style>
+                    <div style="display: flex;justify-content: center; align-items: center;">
+                    
+                        <div class="box"></div>
+                    
+                    </div>
 
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
