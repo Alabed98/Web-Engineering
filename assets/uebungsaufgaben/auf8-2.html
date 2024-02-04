@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="max-width: 800px; width: 100%;" id="text">
+
+    </div>
+
+
+    <script>
+
+async function data (){
+    const daten1 = await fetch("http://localhost:8080/A.txt");
+    const inhalt1 = await daten1.text();
+
+    const daten2 = await fetch("http://localhost:8080/B.txt");
+    const inhalt2 = await daten2.text();
+
+    const content1 = inhalt1.split('\n');
+    const content2 = inhalt2.split('\n');
+
+   
+    const minLaenge = Math.min(content1.length, content2.length);
+
+    let i = 0;
+
+    datenLesen(minLaenge, content1, content2);
+    
+    if(content1 > minLaenge){
+        datenLesen(content1.length, content1, content2);
+    }
+    else if(content2 > minLaenge){
+        datenLesen(content2.length, content1, content2);
+    }
+
+    function datenLesen (laenge, daten1, daten2){
+    
+        for(;i < laenge; i++){
+
+            let elem = document.createElement("p");
+
+            elem.innerHTML = daten1[i] + ' ' + daten2[i];
+
+            document.getElementById("text").appendChild(elem);
+
+        }
+    } 
+
+}
+
+data();
+    </script>
+</body>
+</html>
