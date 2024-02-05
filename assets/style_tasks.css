@@ -7,3 +7,8 @@ body{
 .content{
     padding: 10px 20px;
 }
+
+*{
+    font-family: "Hind", sans-serif;
+    line-height: 1.6;
+}
