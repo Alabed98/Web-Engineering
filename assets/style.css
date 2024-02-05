@@ -7,7 +7,10 @@ html {
     background-repeat: no-repeat;
 
 }
-
+*{
+    font-family: "Hind", sans-serif;
+    line-height: 1.6;
+}
 body {
     margin: 0;
     box-sizing: border-box;
