@@ -30,8 +30,8 @@
             <a>Aufgaben & Lösung</a>
             <div class="dropdow-content">
                 <a href="#erste_Aufgabe">Aufgabe 1</a>
-                <a href="#zweite_Aufgabe">Aufgabe 1</a>
-
+                <a href="#zweite_Aufgabe">Aufgabe 2</a>
+                <a href="#dritte_Aufgabe">Aufgabe 3</a>
 
             </div>
 
@@ -218,6 +218,89 @@ console.log(charArray);
                 </div>
             </div>
         </div>
+        <div class="content" id="dritte_Aufgabe">
+            <div class="card">
+                <div class="inhalt">
+                    <h2>
+                        Module (Export und Import) 
+                    </h2>
+                    
+
+
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Meine Lösung</h2>
+                        <div class="loesung">
+                            <iframe class="tasks" src="assets/JS/index.html"></iframe>
+    
+                        </div>
+
+
+                        
+                    <div style="width:100%" class="CodeTeil">
+                        <h2>Hier ist der Html-Code meiner Lösung</h2>
+                        <p style="margin: 10px 0;">Klicken Sie <button onclick="CodeZeigen1()"
+                                class="btn">HIER</button>,
+                            um den Code sichtbar zu machen</p>
+                        <pre class="CodeContainer"><div id="Code1" style="margin: 0;padding: 0;display: none;">
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtDocument&lt/title&gt
+    &lt/head&gt
+    
+    &ltbody&gt
+    
+        &ltform&gt
+            &ltinput type="number" id="zahl1"&gt
+            &ltinput type="number" id="zahl2"&gt
+            &ltinput type="submit" onclick="summe()"&gt
+    
+            &ltdiv id="res"&gt&lt/div&gt
+        &lt/form&gt
+    
+        &ltscript type="module"&gt
+            import { add as addFunction } from "./add.js";
+    
+            window.summe = function () {
+                const zahl1 = parseInt(document.getElementById("zahl1").value);
+                const zahl2 = parseInt(document.getElementById("zahl2").value);
+    
+                document.getElementById("res").innerHTML = addFunction(zahl1, zahl2);
+    
+            }
+    
+        &lt/script&gt
+    
+    &lt/body&gt
+    
+    &lt/html&gt</div></pre>
+</div>
+<script>
+    function CodeZeigen1() {
+        const codeElem = document.getElementById("Code1");
+        const display2 = codeElem.style.display;
+
+        if (display2 === "none") {
+            codeElem.style.display = "block";
+
+        } else {
+            codeElem.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
     </div>
 </body>
 
