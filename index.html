@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigator solution</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <style>
         html {
             height: 100%;
@@ -32,7 +35,7 @@
 
         header {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 3fr;
             align-content: center;
             padding: 0 10px;
             color: #c8d3e5;
@@ -40,10 +43,12 @@
 
         .titel {
             font-size: 4rem;
+            font-family: "Libre Baskerville", serif;
+
         }
 
         .untertitel {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         nav {
@@ -189,10 +194,29 @@
             padding: 10px;
             margin: 10px 0;
             line-height: 2rem;
-
-
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            font-family: "Libre Baskerville", serif;
         }
 
+        .image1 {
+            width: 100%;
+            max-width: 300px;
+            padding: 30px 0;
+
+           animation: image1Animation 2s ease-in-out;
+        }
+         @keyframes image1Animation {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
         @media screen and (max-width: 768px) {
             .card {
                 max-width: 100%;
@@ -204,7 +228,7 @@
             }
         }
 
-        @media screen and (max-width:360px) {
+        @media screen and (max-width:415px) {
             .titel {
                 font-size: 2.5rem;
             }
@@ -212,13 +236,14 @@
             h1 {
                 font-size: 1.5rem;
             }
-            .untertitel{
+
+            .untertitel {
                 font-size: 2rem;
             }
         }
 
 
-        @media screen and (max-width:230px) {
+        @media screen and (max-width:260px) {
             .titel {
                 font-size: 1.5rem;
             }
@@ -226,12 +251,11 @@
             h1 {
                 font-size: 1rem;
             }
-            .untertitel{
+
+            .untertitel {
                 font-size: 1.5rem;
             }
         }
-
-
     </style>
 
 </head>
@@ -241,11 +265,11 @@
     <nav class="menue">
 
 
-   
+
 
 
         <div class="dropdow">
-            <a >Übung & Lösung</a>
+            <a>Übung & Lösung</a>
             <div class="dropdow-content">
                 <a href="Uebung1.html" target="_blank">Übungsblatt 1</a>
                 <a href="Uebung2.html" target="_blank">Übungsblatt 2</a>
@@ -259,6 +283,7 @@
                 <a href="Uebung10.html" target="_blank">Übungsblatt 10</a>
                 <a href="Uebung11.html" target="_blank">Übungsblatt 11</a>
                 <a href="Uebung12.html" target="_blank">Übungsblatt 12</a>
+                <a href="zusaetzlich.html" target="_blank">Zusätzliche Aufgaben</a>
             </div>
 
         </div>
@@ -277,7 +302,7 @@
     <div class="einleitung">
 
         <div>
-            <img src="" alt="">
+            <img src="assets/images/html-css-js.png" class="image1" alt="html-css-js">
         </div>
 
         <div>
@@ -546,6 +571,26 @@
             </div>
         </div>
 
+        <div class="card">
+            <div class="card-content">
+                <div>
+                    <h1>Zusätzliche Aufgaben
+                    </h1>
+                </div>
+
+                <div>
+
+                    <p style="margin-top: 30px;">
+
+
+
+                        <a href="zusaetzlich.html" class="btn">Meine Lösung</a>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
 
 
 
